@@ -1,9 +1,7 @@
-import { setupPostComponent } from './lib/PostComponent.js';
-//import { containerWidget } from './lib/widgets.js';
-
 import './styles.css';
 import  {listBroths}  from './lib/broths.js';
 import {listProteins} from './lib/proteins.js';
+//import { containerWidget } from './lib/widgets.js';
 
 document.querySelector('#app').innerHTML = `
   <body>    
