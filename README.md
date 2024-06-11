@@ -8,4 +8,13 @@ Get Broths: http://localhost:3000/broths
 
 Get Proteins: http://localhost:3000/proteins
 
+Post Order: http://localhost:3000/orders
+
+body: `
+    {
+    "brothId": "3",
+    "proteinId": "2"
+    }
+`
+
 key-api: ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf
