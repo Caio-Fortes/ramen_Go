@@ -12,11 +12,21 @@ export function setupPostComponent(element) {
     }
     element.addEventListener('click', () => setCounter(++counter))
 
-    const created = () => {
+    const getBroths = () => {
         async function get(){
             try{
-                posts = await PostService.getPosts();
-                console.log(posts)
+                await PostService.getPosts('http://localhost:3000/broths');
+            } catch(err){
+                console.log(err)
+            }
+        }
+        return get();
+    }
+
+    const getProteins = () => {
+        async function get(){
+            try{
+                await PostService.getPosts('http://localhost:3000/proteins');
             } catch(err){
                 console.log(err)
             }
@@ -26,6 +36,7 @@ export function setupPostComponent(element) {
 
     //mounted
     setCounter(0);
-    created();
+    getBroths();
+    getProteins();
 }
   

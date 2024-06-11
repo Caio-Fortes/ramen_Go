@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const url = "http://localhost:3000/"
+//const url = "http://localhost:3000/proteins"
 //const url = "api/"
 
 class PostService{
-    static getPosts(){
-        // eslint-disable-next-line no-async-promise-executor
+    static getPosts(url){
         return new Promise(async (resolve, reject) => {
             try{
                 const res = await axios.get(url);
@@ -18,13 +17,8 @@ class PostService{
             }
         })
     }
-
     static insertPost(text){
         return axios.post(url, { text });
-    }
-
-    static deletePost(id){
-        return axios.delete(`${url}${id}`);
     }
 }
 
