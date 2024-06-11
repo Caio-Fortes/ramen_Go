@@ -3,6 +3,7 @@ import PostService from "../PostService";
 export async function listBroths(element) {
     //datas
     let broths = [];
+    let brothSelected = null;
 
     //methods
     async function get(){
@@ -12,9 +13,13 @@ export async function listBroths(element) {
             console.log(err)
         }
     }
+
+    function selecionarBroth(card){
+        brothSelected = card.id;
+    }
    
     //template
-    const setCounter = () => {
+    const setTemplateCards = () => {
         for(let i = 0; i < broths.length; i++){
             let cardPrincipal = document.createElement('div');
             cardPrincipal.classList.add('card');
@@ -42,12 +47,22 @@ export async function listBroths(element) {
             cardPrincipal.appendChild(descriptionCard);
             cardPrincipal.appendChild(priceCard);
             element.appendChild(cardPrincipal);
+
+            let selectCard = {
+                id: broths[i].id,
+                imageActive: broths[i].ImageActive,
+                imgElement: imgElement,
+                titleCard: titleCard,
+                descriptionCard: descriptionCard,
+                priceCard: priceCard
+            }
+            cardPrincipal.addEventListener('click', () => selecionarBroth(selectCard))
         }
     }
 
     //mounted
     await get();
-    console.log(broths)
-    setCounter();
+    setTemplateCards();
+    //console.log(broths)
 }
   

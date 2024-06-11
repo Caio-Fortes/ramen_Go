@@ -1,11 +1,10 @@
 import './styles.css';
 import { setupPostComponent } from './lib/PostComponent.js';
 import  {listBroths}  from './lib/broths.js';
+import { containerWidget } from './lib/widgets.js';
 
 document.querySelector('#app').innerHTML = `
-  <body>
-    <div id="PostComponent"></div>
-    
+  <body>    
     <section>
       <div id="container_principal">
           <div class="logo">
@@ -43,10 +42,21 @@ document.querySelector('#app').innerHTML = `
         <section>
           <div id="container_select_broth"></div>
         </section>
+
+        <section>
+          <div id="container-widget"></div> 
+        </section>
+
+        <section>
+        <div id="container_select_broth"></div>
+      </section>
+
+      
       </div>
     </section>
   </body>
 `
 
-setupPostComponent(document.querySelector('#PostComponent'))
-listBroths(document.querySelector('#container_select_broth'))
+setupPostComponent(document.querySelector('#PostComponent'));
+listBroths(document.querySelector('#container_select_broth'));
+//containerWidget(document.querySelector('#widget-scroll-cards'))
