@@ -1,26 +1,25 @@
 import './styles.css';
-import  {listBroths}  from './lib/broths.js';
-import {listProteins} from './lib/proteins.js';
-//import { containerWidget } from './lib/widgets.js';
+import  {listBroths}  from './src/components/broths.js';
+import {listProteins} from './src/components/proteins.js';
 
 document.querySelector('#app').innerHTML = `
   <body>    
     <section>
       <div id="container_principal">
           <div class="logo">
-            <img src="./public/logo.png">
+            <img src="./public/images/logo.png">
           </div>
           <div id="container_capa">
             <div class="circulo-marrom">
               <div class="entregadora">
-                <img src="./public/entregadora.png">
+                <img src="./public/images/entregadora.png">
               </div>
             </div>
             <div class="balaoAzul">
-              <img src="./public/BalaoAzul.png">
+              <img src="./public/images/BalaoAzul.png">
             </div>
             <div class="balaoAmarelo">
-              <img src="./public/BalaoAmarelo.png">
+              <img src="./public/images/BalaoAmarelo.png">
             </div>
           </div>
           <div class="letras-amarelas"> ラーメン </div>
@@ -63,4 +62,3 @@ document.querySelector('#app').innerHTML = `
 
 listBroths(document.querySelector('#container_select_broth'));
 listProteins(document.querySelector('#container_select_protein'))
-//containerWidget(document.querySelector('#widget-scroll-cards'))

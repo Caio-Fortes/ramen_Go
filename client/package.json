@@ -9,7 +9,6 @@
   ],
   "main": "./dist/counter.umd.cjs",
   "module": "./dist/counter.js",
-  "types": "./index.d.ts",
   "exports": {
     "types": "./index.d.ts",
     "import": "./dist/counter.js",

@@ -1,4 +1,4 @@
-import PostService from "../PostService";
+import PostService from "../lib/PostService";
 
 export async function listProteins(element) {
     //datas
