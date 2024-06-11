@@ -22,7 +22,7 @@
 }
 
 
-#container_select_proteins, #container_select_broth{
+#container_select_protein, #container_select_broth{
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -32,6 +32,8 @@
         width: 0px;
     }
 }
+
+
 
 .card{
     min-width: 288px;

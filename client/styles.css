@@ -220,14 +220,14 @@ li {
     color: #000000;
     margin-top: 20px;
   }
-  #container_select_proteins, #container_select_broth {
+  #container_select_protein, #container_select_broth {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 360px;
     margin-top: 40px;
   }
-  #container_select_proteins::-webkit-scrollbar, #container_select_broth::-webkit-scrollbar {
+  #container_select_protein::-webkit-scrollbar, #container_select_broth::-webkit-scrollbar {
     width: 0px;
   }
   .card {
