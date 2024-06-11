@@ -4,6 +4,9 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
     const apiKey = req.headers['key-api'];
+    const {brothId,  proteinId} = req.body;
+    const idsOrder = { brothId,  proteinId };
+
     if (!apiKey) {
         return res.status(403).json({ error: "x-api-key header missing" });
     }
@@ -12,15 +15,56 @@ router.post('/', async (req, res) => {
     if (apiKey !== validApiKey) {
         return res.status(403).json({ error: 'invalid api key' });
     }
-
+    
+    if(!brothId || !proteinId){
+        return res.status(400).json({ error:  "both brothId and proteinId are required" })
+    }
     try{
-        return res.status(201).json({ message: 'teste' });
+        const broths = await loadPostsBroths();
+        const brothSelected = await broths.findOne({id: idsOrder.brothId })
+        const proteins = await loadPostsProteins();
+        const proteinSelected = await proteins.findOne({id: idsOrder.proteinId })
+
+        const newOrder = {
+            description: `${brothSelected.name} and ${proteinSelected.name} Ramen`,
+            image: setImageOrderByProteinName(proteinSelected.name)
+        }
+
+        res.send(newOrder);
+        
+        return res.status(201);
     } catch(error){
-        return res.status(403).json({ error: error });
+        return res.status(500).json({ error: "could not place order" });
     }
 })
 
-async function loadPostsCollection(){
+function setImageOrderByProteinName(proteinSelected){
+    switch(proteinSelected){
+        case 'Chasu':
+            return "../public/ProteinChasu.png";
+        case 'Yasai Vegetarian':
+            return "../public/ProteinYasaiVegetarian.png";
+        case 'Karaague':
+            return "../public/ProteinKaraague.png";
+        default: '';
+    }
+}
+
+async function loadPostsBroths(){
+    const client = await mongodb.MongoClient.connect(
+        'mongodb+srv://root:root@db-express.4fwcimy.mongodb.net/?retryWrites=true&w=majority&appName=DB-Express'
+    );
+    return client.db('ramenGo').collection('Broths')
+}
+
+async function loadPostsProteins(){
+    const client = await mongodb.MongoClient.connect(
+        'mongodb+srv://root:root@db-express.4fwcimy.mongodb.net/?retryWrites=true&w=majority&appName=DB-Express'
+    );
+    return client.db('ramenGo').collection('Proteins')
+}
+
+async function loadPostsOrders(){
     const client = await mongodb.MongoClient.connect(
         'mongodb+srv://root:root@db-express.4fwcimy.mongodb.net/?retryWrites=true&w=majority&appName=DB-Express'
     );
