@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     const apiKey = req.headers['key-api'];
     if (!apiKey) {
-        return res.status(403).json({ error: 'header missing' });
+        return res.status(403).json({ error: "x-api-key header missing" });
     }
 
     const validApiKey = 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf';
