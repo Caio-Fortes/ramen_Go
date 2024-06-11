@@ -63,6 +63,5 @@ export async function listProteins(element) {
     //mounted
     await get();
     setTemplateCards();
-    console.log(proteins)
 }
   
