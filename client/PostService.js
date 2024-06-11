@@ -9,9 +9,7 @@ class PostService{
             try{
                 const res = await axios.get(url);
                 const data = res.data;
-                resolve(
-                   console.log(data)
-                )
+                resolve(data)
             } catch(err){
                 reject(err)
             }
