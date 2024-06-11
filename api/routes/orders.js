@@ -1,6 +1,7 @@
 const express = require('express');
 const mongodb = require('mongodb');
 const router = express.Router();
+const axios = require('axios');
 
 router.post('/', async (req, res) => {
     const apiKey = req.headers['key-api'];
@@ -26,17 +27,30 @@ router.post('/', async (req, res) => {
         const proteinSelected = await proteins.findOne({id: idsOrder.proteinId })
 
         const newOrder = {
+            orderId: await generateOrderId(validApiKey),
             description: `${brothSelected.name} and ${proteinSelected.name} Ramen`,
             image: setImageOrderByProteinName(proteinSelected.name)
         }
 
         res.send(newOrder);
-        
         return res.status(201);
     } catch(error){
         return res.status(500).json({ error: "could not place order" });
     }
 })
+
+async function generateOrderId(apiKey) {
+    try {
+        const response = await axios.post('https://api.tech.redventures.com.br/orders/generate-id', {}, {
+            headers: {
+                'x-api-key': apiKey
+            }
+        });
+        return response.data.orderId;
+    } catch (error) {
+        throw new Error('Failed to generate orderId: ' + error.response.data.message);
+    }
+}
 
 function setImageOrderByProteinName(proteinSelected){
     switch(proteinSelected){
@@ -64,11 +78,5 @@ async function loadPostsProteins(){
     return client.db('ramenGo').collection('Proteins')
 }
 
-async function loadPostsOrders(){
-    const client = await mongodb.MongoClient.connect(
-        'mongodb+srv://root:root@db-express.4fwcimy.mongodb.net/?retryWrites=true&w=majority&appName=DB-Express'
-    );
-    return client.db('ramenGo').collection('orders')
-}
 
 module.exports = router;
