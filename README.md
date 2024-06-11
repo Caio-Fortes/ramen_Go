@@ -18,3 +18,13 @@ body: `
 `
 
 key-api: ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf
+
+run api:
+1# cd api
+2# npm install
+3# npm run dev
+
+run client:
+1# cd client
+2# npm install
+3# npm run dev
