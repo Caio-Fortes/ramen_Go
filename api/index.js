@@ -9,9 +9,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //Routers
-const posts = require('./routes/posts');
-app.use('/', posts);
+const broths = require('./routes/broths');
+app.use('/broths', broths);
+
+const proteins = require('./routes/proteins');
+app.use('/proteins', proteins);
 
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {console.log(`Servidor iniciado na porta ${port}`)})
