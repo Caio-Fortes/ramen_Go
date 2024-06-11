@@ -3,8 +3,23 @@ const mongodb = require('mongodb');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    const posts = await loadPostsCollection();
-    res.send(await posts.find({}).toArray());
+    const apiKey = req.headers['key-api'];
+    if (!apiKey) {
+        return res.status(403).json({ error: 'header missing' });
+    }
+
+    const validApiKey = 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf';
+    if (apiKey !== validApiKey) {
+        return res.status(403).json({ error: 'invalid api key' });
+    }
+
+    try{
+        const broths = await loadPostsCollection();
+        res.send(await broths.find({}).toArray());
+        res.status(201);
+    } catch{
+        res.status(403);
+    }
 })
 
 async function loadPostsCollection(){
