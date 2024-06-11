@@ -1,0 +1,90 @@
+
+#container_principal{
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../../public/background.png');
+}
+
+#container_principal_sucess{
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../../public/backgroundAzul.png');
+}
+
+.logo{
+    @include setWidthHeight(125px, 16px);
+    @include setPositionAbsolute(20px, auto, auto, 117px);
+}
+
+#container_capa{
+    @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
+    @include setPositionAbsolute(60px, 0px, 0px, 48px);
+    @include setWidthHeight($WidthContainerCapaMobile, $HeigthContainerCapaMobile);
+}
+
+#container_capa_sucess{
+    @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
+    @include setPositionRelative(100px, auto, auto, auto);
+}
+
+.circulo-marrom{
+    background: #730000; 
+    border-radius: 50%;  
+    @include setWidthHeight($WidthCirculoMarrom, $HeigthCirculoMarrom);
+}
+
+.entregadora{
+    @include setWidthHeight($WidthEntregadora, $HeightEntregadora);
+    @include setPositionRelative(auto, 8px, 18px, auto);
+}
+
+.balaoAzul{
+    @include setWidthHeight(45.69px, 50.81px);
+    @include setPositionAbsolute(4px, 217px, auto, auto);
+}
+
+.balaoAmarelo{
+    @include setWidthHeight(41.75px, 95.31px);
+    @include setPositionRelative(11px, 17px, auto, auto);
+}
+
+.letras-amarelas{
+    @include setWidthHeight(219px, 54px);
+    @include setPositionAbsolute(341px, 0px, 0px, 70px);
+    @include setFontSizeFontWeightLineHeight(48px, 900, 56px);
+    color: $YellowDefault;
+}
+
+.title-go{
+    @include setWidthHeight(231px, 100px);
+    @include setPositionAbsolute(406px, 0px, 0px, 64px);
+    @include setFontSizeFontWeightLineHeight(121px, 900, 100px);
+    color: $WhiteDefault;
+}
+
+.description{
+    @include setPositionRelative(530px, auto, auto, auto);
+    @include setFontSizeFontWeightLineHeight(16px, 500, 20px);
+    &::before{
+        content: 'Enjoy a good ramen in the comfort of \A your house. Create your own ramen and \A choose your favorite flavour \A combination!';
+        white-space: pre-line;
+        color: $WhiteDefault;
+    }
+}
+
+.image-broth-selected_sucess{
+    @include setWidthHeight(338px, 374px);
+}
+
+.title-broth-selected_sucess{
+    @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
+    color: $White;
+}
+
+.title-broth-selected_sucess{
+    @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
+    color: $White;
+}
+
+.name-broth-selected-sucess{
+    @include setWidthHeight(270px, 64px);
+    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
+    @include setPositionRelative(15px, auto, auto, auto);
+    color: $YellowDefault;
+}

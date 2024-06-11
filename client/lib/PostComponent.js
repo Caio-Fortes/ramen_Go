@@ -5,13 +5,6 @@ export function setupPostComponent(element) {
     let counter = 0
     let posts = [];
 
-    //methods
-    const setCounter = (count) => {
-      counter = count
-      element.innerHTML = `count is ${counter}`
-    }
-    element.addEventListener('click', () => setCounter(++counter))
-
     const getBroths = () => {
         async function get(){
             try{
@@ -35,7 +28,6 @@ export function setupPostComponent(element) {
     }
 
     //mounted
-    setCounter(0);
     getBroths();
     getProteins();
 }
