@@ -14,8 +14,34 @@ export async function listBroths(element) {
         }
     }
 
-    function selecionarBroth(card){
-        brothSelected = card.id;
+    function selecionarBroth(cardSelected) {
+        console.log(cardSelected);
+        brothSelected = cardSelected.id;
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.classList.remove('selected-card');
+        });
+        document.querySelectorAll('.title-card').forEach(titleCard => {
+            titleCard.classList.remove('selected-title-card');
+        });
+        document.querySelectorAll('.description-card').forEach(titleCard => {
+            titleCard.classList.remove('selected-description-card');
+        });
+        document.querySelectorAll('.price-card').forEach(titleCard => {
+            titleCard.classList.remove('selected-price-card');
+        });
+        broths.forEach(broth => {
+            const imgElement = document.querySelector(`img[src="${broth.ImageActive}"]`);
+            if (imgElement) {
+                imgElement.src = broth.imageInactive;
+            }
+        });
+
+        cardSelected.cardPrincipal.classList.add('selected-card');
+        cardSelected.titleCard.classList.add('selected-title-card');
+        cardSelected.descriptionCard.classList.add('selected-description-card');
+        cardSelected.priceCard.classList.add('selected-price-card');
+        cardSelected.imgElement.src = cardSelected.imageActive;
     }
    
     //template
@@ -50,19 +76,23 @@ export async function listBroths(element) {
 
             let selectCard = {
                 id: broths[i].id,
+                cardPrincipal: cardPrincipal,
                 imageActive: broths[i].ImageActive,
+                imageInactive: broths[i].imageInactive,
                 imgElement: imgElement,
                 titleCard: titleCard,
                 descriptionCard: descriptionCard,
                 priceCard: priceCard
             }
-            cardPrincipal.addEventListener('click', () => selecionarBroth(selectCard))
+            cardPrincipal.addEventListener('click', 
+                () => selecionarBroth(selectCard)
+            )
         }
     }
 
     //mounted
     await get();
     setTemplateCards();
-    //console.log(broths)
+    console.log(broths)
 }
   

@@ -8,7 +8,7 @@
     margin: 40px;
 }
 
-// Body Home
+// Body index
 
 #title_select_broth{
     @include setFontSizeFontWeightLineHeight(24px, 900, 31px);
@@ -33,8 +33,6 @@
     }
 }
 
-
-
 .card{
     min-width: 288px;
     height: 316px;
@@ -47,15 +45,13 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    &:active {
-        background-color: $BlueDefault;
-    }
-    &:active > .title-card, &:active > .description-card{
-        color: $White;
-    }
     &:active > .price-card{
         color: $YellowDefault;
     }
+}
+
+.selected-card {
+    background-color: $BlueDefault;
 }
 
 .title-card{
@@ -64,16 +60,28 @@
     color: $BlueDefault;
 }
 
+.selected-title-card{
+    color: $White;
+}
+
 .description-card{
     color: $BlackDefault;;
     @include setFontSizeFontWeightLineHeight(10px, 400, 16px);
     @include setPositionRelative(15px, auto, auto, auto);
 }
 
+.selected-description-card{
+    color: $White;
+}
+
 .price-card{
     color: $OrangeDefault;
     @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
     @include setPositionRelative(35px, auto, auto, auto);
+}
+
+.selected-price-card{
+    color: $YellowDefault;
 }
 
 .container-widget{

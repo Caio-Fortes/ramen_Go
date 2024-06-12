@@ -243,14 +243,11 @@ li {
     align-items: center;
     justify-content: center;
   }
-  .card:active {
-    background-color: #1820EF;
-  }
-  .card:active > .title-card, .card:active > .description-card {
-    color: #FFFFFF;
-  }
   .card:active > .price-card {
     color: #FFC024;
+  }
+  .selected-card {
+    background-color: #1820EF;
   }
   .title-card {
     text-align: center;
@@ -264,6 +261,9 @@ li {
     left: auto;
     color: #1820EF;
   }
+  .selected-title-card {
+    color: #FFFFFF;
+  }
   .description-card {
     color: #000000;
     text-align: center;
@@ -276,6 +276,9 @@ li {
     bottom: auto;
     left: auto;
   }
+  .selected-description-card {
+    color: #FFFFFF;
+  }
   .price-card {
     color: #FF4E42;
     text-align: center;
@@ -287,6 +290,9 @@ li {
     right: auto;
     bottom: auto;
     left: auto;
+  }
+  .selected-price-card {
+    color: #FFC024;
   }
   .container-widget {
     position: relative;
