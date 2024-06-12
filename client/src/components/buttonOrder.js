@@ -1,22 +1,18 @@
 import PostService from "../lib/PostService";
 import { BrothState } from '../lib/StateDatas';
+import { ProteinState } from '../lib/StateDatas';
 
 export async function buttonPlaceNewOrder(element){
      //datas
     let orderSelected = {};
     
     //methods
-    function teste() {
-        console.log('Broth selecionado:', BrothState.brothSelected);
-        console.log('protein selecionado:', BrothState.brothSelected);
-
-    }
-
     async function postOrder(){
         orderSelected = {
             brothId: BrothState.brothSelected,
-            proteinId: 2
+            proteinId: ProteinState.proteinSelected
         }
+        console.log(orderSelected)
 
         try{
             broths = await PostService.getPosts('http://localhost:3000/broths');
@@ -29,7 +25,7 @@ export async function buttonPlaceNewOrder(element){
      const setTemplate = () => {
         element.innerHTML = '<button>Place New Order</button>'
         element.addEventListener('click', () => {
-            teste();
+            postOrder();
         });
      }
  

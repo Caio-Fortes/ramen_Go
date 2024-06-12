@@ -1,4 +1,6 @@
 import PostService from "../lib/PostService";
+import { ProteinState, setProteinSelected } from '../lib/StateDatas';
+
 
 export async function listProteins(element) {
     //datas
@@ -31,8 +33,7 @@ export async function listProteins(element) {
     }
 
     function selecionarProtein(cardSelected) {
-        proteinSelected = cardSelected.id;
-        console.log('proteinSelected:', proteinSelected)
+        setProteinSelected(cardSelected.id)
 
         proteins.forEach(broth => {
             const imgElement = document.querySelector(`img[src="${broth.ImageActive}"]`);
