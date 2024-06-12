@@ -45,9 +45,6 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    &:active > .price-card{
-        color: $YellowDefault;
-    }
 }
 
 .selected-card {

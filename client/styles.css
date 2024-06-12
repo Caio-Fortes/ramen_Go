@@ -243,9 +243,6 @@ li {
     align-items: center;
     justify-content: center;
   }
-  .card:active > .price-card {
-    color: #FFC024;
-  }
   .selected-card {
     background-color: #1820EF;
   }

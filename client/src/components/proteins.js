@@ -14,8 +14,39 @@ export async function listProteins(element) {
         }
     }
 
-    function selecionarProtein(card){
-        proteinSelected = card.id;
+    function clearSelection(containerId) {
+        const container = document.getElementById(containerId);
+        container.querySelectorAll('.card').forEach(card => {
+            card.classList.remove('selected-card');
+        });
+        container.querySelectorAll('.title-card').forEach(titleCard => {
+            titleCard.classList.remove('selected-title-card');
+        });
+        container.querySelectorAll('.description-card').forEach(descriptionCard => {
+            descriptionCard.classList.remove('selected-description-card');
+        });
+        container.querySelectorAll('.price-card').forEach(priceCard => {
+            priceCard.classList.remove('selected-price-card');
+        });
+    }
+
+    function selecionarProtein(cardSelected) {
+        proteinSelected = cardSelected.id;
+        console.log('proteinSelected:', proteinSelected)
+
+        proteins.forEach(broth => {
+            const imgElement = document.querySelector(`img[src="${broth.ImageActive}"]`);
+            if (imgElement) {
+                imgElement.src = broth.imageInactive;
+            }
+        });
+
+        clearSelection('container_select_protein');
+        cardSelected.cardPrincipal.classList.add('selected-card');
+        cardSelected.titleCard.classList.add('selected-title-card');
+        cardSelected.descriptionCard.classList.add('selected-description-card');
+        cardSelected.priceCard.classList.add('selected-price-card');
+        cardSelected.imgElement.src = cardSelected.imageActive;
     }
    
     //template
@@ -51,12 +82,16 @@ export async function listProteins(element) {
             let selectCard = {
                 id: proteins[i].id,
                 imageActive: proteins[i].ImageActive,
+                imageInactive: proteins[i].imageInactive,
                 imgElement: imgElement,
                 titleCard: titleCard,
                 descriptionCard: descriptionCard,
-                priceCard: priceCard
+                priceCard: priceCard,
+                cardPrincipal: cardPrincipal,
             }
-            cardPrincipal.addEventListener('click', () => selecionarProtein(selectCard))
+            cardPrincipal.addEventListener('click', 
+                () => selecionarProtein(selectCard)
+            )
         }
     }
 

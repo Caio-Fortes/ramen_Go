@@ -14,22 +14,26 @@ export async function listBroths(element) {
         }
     }
 
-    function selecionarBroth(cardSelected) {
-        console.log(cardSelected);
-        brothSelected = cardSelected.id;
-
-        document.querySelectorAll('.card').forEach(card => {
+    function clearSelection(containerId) {
+        const container = document.getElementById(containerId);
+        container.querySelectorAll('.card').forEach(card => {
             card.classList.remove('selected-card');
         });
-        document.querySelectorAll('.title-card').forEach(titleCard => {
+        container.querySelectorAll('.title-card').forEach(titleCard => {
             titleCard.classList.remove('selected-title-card');
         });
-        document.querySelectorAll('.description-card').forEach(titleCard => {
-            titleCard.classList.remove('selected-description-card');
+        container.querySelectorAll('.description-card').forEach(descriptionCard => {
+            descriptionCard.classList.remove('selected-description-card');
         });
-        document.querySelectorAll('.price-card').forEach(titleCard => {
-            titleCard.classList.remove('selected-price-card');
+        container.querySelectorAll('.price-card').forEach(priceCard => {
+            priceCard.classList.remove('selected-price-card');
         });
+    }
+
+    function selecionarBroth(cardSelected) {
+        brothSelected = cardSelected.id;
+        console.log('brothSelected:', brothSelected)
+
         broths.forEach(broth => {
             const imgElement = document.querySelector(`img[src="${broth.ImageActive}"]`);
             if (imgElement) {
@@ -37,6 +41,7 @@ export async function listBroths(element) {
             }
         });
 
+        clearSelection('container_select_broth');
         cardSelected.cardPrincipal.classList.add('selected-card');
         cardSelected.titleCard.classList.add('selected-title-card');
         cardSelected.descriptionCard.classList.add('selected-description-card');
@@ -93,6 +98,5 @@ export async function listBroths(element) {
     //mounted
     await get();
     setTemplateCards();
-    console.log(broths)
 }
   
