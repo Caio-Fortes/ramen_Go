@@ -1,4 +1,8 @@
-export async function containerWidget(element) {
+export async function scrollWidget(element) {
+    //datas
+    let proteins = [];
+
+    //methods
     function scrollBroths(indiceSelected, scrollTo, idContainerScroll, widgetsClass) {
         const elemento = document.getElementById(idContainerScroll);
         elemento.scrollTo(scrollTo, 0);
@@ -20,20 +24,43 @@ export async function containerWidget(element) {
             }
         }
     }
-
-    //template
-    const setTemplateWidgets = () => {
-        for(let i = 0; i < 3; i++){
-            let listaWidget = document.createElement('ul');
-            listaWidget.classList.add('widget-scroll-cards');
-            
-            element.appendChild(listaWidget);
-
-        }
+   
+    function setClickWidget(){
+        const elements = document.querySelectorAll('.widget-circle-select-broths');
+        elements.forEach(element => {
+            element.addEventListener('click', (event) => {
+                const index = event.target.getAttribute('data-index');
+                const scrollTo = event.target.getAttribute('data-scroll');
+                scrollBroths(parseInt(index), parseInt(scrollTo), 'container_select_broth', 'widget-circle-select-broths');
+            });
+        });
+        return elements;
     }
 
-    setTemplateWidgets();
-    //scrollBroths(0, 0, 'container_select_broth', 'widget-circle-select-broths');
-    //scrollBroths(0, 0, 'container_select_proteins', 'widget-circle-select-proteins');
+    //template
+    function setTemplateWidget(){
+        document.querySelector('#select-widget-container').innerHTML = `
+        <ul class="widget-scroll-cards">
+          <li 
+            class="widget-circle-select-broths" 
+            data-index="0" 
+            data-scroll="0"
+          ></li>
+          <li 
+            class="widget-circle-select-broths" 
+            data-index="1" 
+            data-scroll="300"
+          ></li>
+          <li 
+            class="widget-circle-select-broths" 
+            data-index="2" 
+            data-scroll="600"
+          ></li>
+        </ul>`
+    }
+
+    //mounted
+    setTemplateWidget();
+    setClickWidget();
+    scrollBroths(0, 0, 'container_select_broth', 'widget-circle-select-broths');
 }
-  
