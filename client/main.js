@@ -4,25 +4,38 @@ import {listProteins} from './src/components/proteins.js';
 import {scrollWidgetBroth} from './src/components/widgetbroth.js';
 import {scrollWidgetProtein} from './src/components/widgetprotein.js';
 import {buttonPlaceNewOrder} from './src/components/buttonOrder.js';
+import logoImg from './public/images/logo.png'
+import entregadoraImg from './public/images/entregadora.png'
+import balaoAzulImg from './public/images/BalaoAzul.png'
+import balaoAmareloImg from './public/images/BalaoAmarelo.png'
+
+const logo = document.createElement('img');
+logo.src = logoImg
+const entregadora = document.createElement('img');
+entregadora.src = entregadoraImg
+const balaoAzul = document.createElement('img');
+balaoAzul.src = balaoAzulImg
+const balaoAmarelo = document.createElement('img');
+balaoAmarelo.src = balaoAmareloImg
 
 document.querySelector('#app').innerHTML = `
   <body>    
     <section>
       <div id="container_principal">
           <div class="logo">
-            <img src="./public/images/logo.png">
+            <img logo>
           </div>
           <div id="container_capa">
             <div class="circulo-marrom">
               <div class="entregadora">
-                <img src="./public/images/entregadora.png">
+                <entregadora>
               </div>
             </div>
             <div class="balaoAzul">
-              <img src="./public/images/BalaoAzul.png">
+              <balaoAzul>
             </div>
             <div class="balaoAmarelo">
-              <img src="./public/images/BalaoAmarelo.png">
+              <balaoAmarelo>
             </div>
           </div>
           <div class="letras-amarelas"> ラーメン </div>

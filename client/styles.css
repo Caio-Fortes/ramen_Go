@@ -1,6 +1,6 @@
 @font-face {
   font-family: "FonteDefault";
-  src: url("../../public/fonts/MPLUSRounded1c-Black.ttf") format("truetype");
+  src: url("../client/public/fonts/MPLUSRounded1c-Black.ttf") format("truetype");
 }
 html {
   scroll-behavior: smooth;
@@ -27,7 +27,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../../public/images/background.png");
+    background-image: url("../client/public/images/background.png");
     background-size: cover;
     background-position: center;
     width: 360px;
@@ -38,7 +38,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../../public/images/backgroundAzul.png");
+    background-image: url("../client/public/images/backgroundAzul.png");
     background-size: cover;
     background-position: center;
     width: 360px;
@@ -362,7 +362,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../../public/background.png");
+    background-image: url("../client/public/images/background.png");
     background-size: cover;
     background-position: center;
     min-width: 360px;

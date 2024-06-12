@@ -1,5 +1,5 @@
 #container_principal{
-    @include setContainerCapaDesktop('../../public/background.png');
+    @include setContainerCapaDesktop('../client/public/background.png');
     @include setMinMaxWidth($WidthMobile, auto);
     height: 768px;
 }

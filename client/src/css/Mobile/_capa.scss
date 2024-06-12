@@ -1,10 +1,10 @@
 
 #container_principal{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../../public/images/background.png');
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../client/public/images/background.png');
 }
 
 #container_principal_sucess{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../../public/images/backgroundAzul.png');
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../client/public/images/backgroundAzul.png');
 }
 
 .logo{
