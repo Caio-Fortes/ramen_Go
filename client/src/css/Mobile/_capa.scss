@@ -10,6 +10,9 @@
 .logo{
     @include setWidthHeight(125px, 16px);
     @include setPositionAbsolute(20px, auto, auto, 117px);
+    background-image: url('../../../public/images/logo.png');
+    background-size: cover; 
+    background-position: center;
 }
 
 #container_capa{

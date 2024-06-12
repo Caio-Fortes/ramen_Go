@@ -10,7 +10,7 @@ document.querySelector('#app').innerHTML = `
     <section>
       <div id="container_principal">
           <div class="logo">
-            <img src="./public/images/logo.png">
+           
           </div>
           <div id="container_capa">
             <div class="circulo-marrom">

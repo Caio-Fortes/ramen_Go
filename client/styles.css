@@ -52,6 +52,9 @@ li {
     right: auto;
     bottom: auto;
     left: 117px;
+    background-image: url("../../../public/images/logo.png");
+    background-size: cover;
+    background-position: center;
   }
   #container_capa {
     display: flex;
