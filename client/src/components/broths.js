@@ -1,4 +1,5 @@
 import PostService from "../lib/PostService";
+import { BrothState, setBrothSelected } from '../lib/StateDatas';
 
 export async function listBroths(element) {
     //datas
@@ -31,8 +32,8 @@ export async function listBroths(element) {
     }
 
     function selecionarBroth(cardSelected) {
-        brothSelected = cardSelected.id;
-        console.log('brothSelected:', brothSelected)
+        setBrothSelected(cardSelected.id);
+        console.log('brothSelected:', BrothState.brothSelected);
 
         broths.forEach(broth => {
             const imgElement = document.querySelector(`img[src="${broth.ImageActive}"]`);
