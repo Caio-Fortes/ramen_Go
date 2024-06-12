@@ -1,7 +1,8 @@
 import './styles.css';
 import  {listBroths}  from './src/components/broths.js';
 import {listProteins} from './src/components/proteins.js';
-import {scrollWidget} from './src/lib/widgets.js';
+import {scrollWidgetBroth} from './src/components/widgetbroth.js';
+import {scrollWidgetProtein} from './src/components/widgetprotein.js';
 
 document.querySelector('#app').innerHTML = `
   <body>    
@@ -44,7 +45,7 @@ document.querySelector('#app').innerHTML = `
         </section>
         <section>
           <div class="container-widget">
-            <div id="select-widget-container"></div>
+            <div id="select-broth-widget-container"></div>
           </div>
         </section>
         <section>
@@ -59,6 +60,11 @@ document.querySelector('#app').innerHTML = `
           <div id="container_select_protein"></div>
         </section>
         <section>
+          <div class="container-widget">
+            <div id="select-protein-widget-container"></div>
+          </div>
+        </section>
+        <section>
           <div id="button_new_order_sucess">Place new order</div>
         </section>
       </div>
@@ -68,4 +74,6 @@ document.querySelector('#app').innerHTML = `
 
 listBroths(document.querySelector('#container_select_broth'));
 listProteins(document.querySelector('#container_select_protein'));
-scrollWidget(document.querySelector('#select-widget-container'));
+scrollWidgetBroth(document.querySelector('#select-broth-widget-container'));
+scrollWidgetProtein(document.querySelector('#select-protein-widget-container'));
+

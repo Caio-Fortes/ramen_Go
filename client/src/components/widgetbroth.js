@@ -1,4 +1,4 @@
-export async function scrollWidget(element) {
+export async function scrollWidgetBroth(element) {
     //datas
     let proteins = [];
 
@@ -39,7 +39,7 @@ export async function scrollWidget(element) {
 
     //template
     function setTemplateWidget(){
-        document.querySelector('#select-widget-container').innerHTML = `
+        document.querySelector('#select-broth-widget-container').innerHTML = `
         <ul class="widget-scroll-cards">
           <li 
             class="widget-circle-select-broths" 
