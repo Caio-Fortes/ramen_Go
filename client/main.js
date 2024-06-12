@@ -66,7 +66,7 @@ document.querySelector('#app').innerHTML = `
           </div>
         </section>
         <section>
-          <div id="button_new_order_sucess"></div>
+          <div id="button_new_order_container"></div>
         </section>
       </div>
     </section>
@@ -77,5 +77,5 @@ listBroths(document.querySelector('#container_select_broth'));
 listProteins(document.querySelector('#container_select_protein'));
 scrollWidgetBroth(document.querySelector('#select-broth-widget-container'));
 scrollWidgetProtein(document.querySelector('#select-protein-widget-container'));
-buttonPlaceNewOrder(document.querySelector('#button_new_order_sucess'))
+buttonPlaceNewOrder(document.querySelector('#button_new_order_container'))
 

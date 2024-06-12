@@ -4,8 +4,28 @@
     @include setWidthHeight(360px, auto);
 }
 
-#button_new_order_sucess{
+#button_new_order_container{
     margin: 40px;
+}
+
+#button_order{
+    @include setWidthHeight(213px, 60px);
+    background-color: #C5C5C5;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center
+}
+
+.text-button-place-order{
+    @include setFontSizeFontWeightLineHeight(14px, 800, 20.79px);
+    font-family: 'FonteDefault';
+    color: #FFFFFF;
+    letter-spacing: 1.7799999713897705px;
+    margin-right: 14px;
 }
 
 // Body index
