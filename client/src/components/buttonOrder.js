@@ -5,6 +5,7 @@ import { ProteinState } from '../lib/StateDatas';
 export async function buttonPlaceNewOrder(element){
      //datas
     let orderSelected = {};
+    let order = {};
     
     //methods
     async function postOrder(){
@@ -15,7 +16,8 @@ export async function buttonPlaceNewOrder(element){
         console.log(orderSelected)
 
         try{
-            broths = await PostService.getPosts('http://localhost:3000/broths');
+            order = await PostService.insertPost('http://localhost:3000/orders', orderSelected);
+            console.log(order)
         } catch(err){
             console.log(err)
         }

@@ -20,7 +20,7 @@ class PostService {
         });
     }
 
-    static async insertPost(url, text) {
+    static async insertPost(url, params) {
         try {
             const res = await fetch(url, {
                 method: 'POST',
@@ -28,7 +28,7 @@ class PostService {
                     'Content-Type': 'application/json',
                     'key-api': 'ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf'
                 },
-                body: JSON.stringify({ text })
+                body: JSON.stringify(params)
             });
             if (!res.ok) {
                 throw new Error('Network response was not ok ' + res.statusText);
