@@ -4,6 +4,7 @@ import {listProteins} from './src/components/proteins.js';
 import {scrollWidgetBroth} from './src/components/widgetbroth.js';
 import {scrollWidgetProtein} from './src/components/widgetprotein.js';
 import {buttonPlaceNewOrder} from './src/components/buttonOrder.js';
+
 import logoImg from './public/images/logo.png'
 import entregadoraImg from './public/images/entregadora.png'
 import balaoAzulImg from './public/images/BalaoAzul.png'

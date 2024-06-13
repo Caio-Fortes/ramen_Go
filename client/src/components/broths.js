@@ -4,11 +4,13 @@ import { BrothState, setBrothSelected } from '../lib/StateDatas';
 export async function listBroths(element) {
     //datas
     let broths = [];
+    let linkApi = '/api/broths'
+    let linkLocal = 'http://localhost:3000/api/broths'
 
     //methods
     async function get(){
         try{
-            broths = await PostService.getPosts('/api/broths');
+            broths = await PostService.getPosts("api/api/broths");
         } catch(err){
             console.log(err)
         }
