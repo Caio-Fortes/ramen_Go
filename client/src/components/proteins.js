@@ -1,6 +1,5 @@
 import PostService from "../lib/PostService";
-import { ProteinState, setProteinSelected } from '../lib/StateDatas';
-
+import { setProteinSelected, onProteinChange } from '../lib/StateDatas';
 
 export async function listProteins(element) {
     //datas

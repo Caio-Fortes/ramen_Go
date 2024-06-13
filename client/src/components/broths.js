@@ -1,5 +1,5 @@
 import PostService from "../lib/PostService";
-import { BrothState, setBrothSelected } from '../lib/StateDatas';
+import { setBrothSelected, onBrothChange } from '../lib/StateDatas';
 
 export async function listBroths(element) {
     //datas

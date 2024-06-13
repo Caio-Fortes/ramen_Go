@@ -10,7 +10,6 @@
 
 #button_order{
     @include setWidthHeight(213px, 60px);
-    background-color: #C5C5C5;
     border-radius: 50px;
     border: none;
     display: flex;
@@ -18,6 +17,14 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center
+}
+
+.button-active{
+    background-color: $BlueDefault;
+}
+
+.button-disabled{
+    background-color: #C5C5C5;
 }
 
 .text-button-place-order{
