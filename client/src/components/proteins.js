@@ -6,11 +6,13 @@ export async function listProteins(element) {
     //datas
     let proteins = [];
     let proteinSelected = null;
+    let linkApi = '/api/proteins'
+    let linkLocal = 'http://localhost:3000/api/proteins'
 
     //methods
     async function get(){
         try{
-            proteins = await PostService.getPosts('/api/proteins');
+            proteins = await PostService.getPosts(linkLocal);
         } catch(err){
             console.log(err)
         }

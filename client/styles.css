@@ -27,7 +27,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../client/public/images/background.png");
+    background-image: url("/public/images/background.png");
     background-size: cover;
     background-position: center;
     width: 360px;
@@ -38,7 +38,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../client/public/images/backgroundAzul.png");
+    background-image: url("/public/images/backgroundAzul.png");
     background-size: cover;
     background-position: center;
     width: 360px;
@@ -52,7 +52,7 @@ li {
     right: auto;
     bottom: auto;
     left: 117px;
-    background-image: url("../../../public/images/logo.png");
+    background-image: url("/public/images/logo.png");
     background-size: cover;
     background-position: center;
   }
@@ -96,6 +96,9 @@ li {
     right: 8px;
     bottom: 18px;
     left: auto;
+    background-image: url("/public/images/entregadora.png");
+    background-size: cover;
+    background-position: center;
   }
   .balaoAzul {
     width: 45.69px;
@@ -105,6 +108,9 @@ li {
     right: 217px;
     bottom: auto;
     left: auto;
+    background-image: url("/public/images/BalaoAzul.png");
+    background-size: cover;
+    background-position: center;
   }
   .balaoAmarelo {
     width: 41.75px;
@@ -114,6 +120,9 @@ li {
     right: 17px;
     bottom: auto;
     left: auto;
+    background-image: url("/public/images/BalaoAmarelo.png");
+    background-size: cover;
+    background-position: center;
   }
   .letras-amarelas {
     width: 219px;
@@ -365,7 +374,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../client/public/images/background.png");
+    background-image: url("../client/public/background.png");
     background-size: cover;
     background-position: center;
     min-width: 360px;

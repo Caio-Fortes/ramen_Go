@@ -1,16 +1,16 @@
 
 #container_principal{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../client/public/images/background.png');
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '/public/images/background.png');
 }
 
 #container_principal_sucess{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '../client/public/images/backgroundAzul.png');
+    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '/public/images/backgroundAzul.png');
 }
 
 .logo{
     @include setWidthHeight(125px, 16px);
     @include setPositionAbsolute(20px, auto, auto, 117px);
-    background-image: url('../../../public/images/logo.png');
+    background-image: url('/public/images/logo.png');
     background-size: cover; 
     background-position: center;
 }
@@ -35,16 +35,25 @@
 .entregadora{
     @include setWidthHeight($WidthEntregadora, $HeightEntregadora);
     @include setPositionRelative(auto, 8px, 18px, auto);
+    background-image: url('/public/images/entregadora.png');
+    background-size: cover; 
+    background-position: center;
 }
 
 .balaoAzul{
     @include setWidthHeight(45.69px, 50.81px);
     @include setPositionAbsolute(4px, 217px, auto, auto);
+    background-image: url('/public/images/BalaoAzul.png');
+    background-size: cover; 
+    background-position: center;
 }
 
 .balaoAmarelo{
     @include setWidthHeight(41.75px, 95.31px);
     @include setPositionRelative(11px, 17px, auto, auto);
+    background-image: url('/public/images/BalaoAmarelo.png');
+    background-size: cover; 
+    background-position: center;
 }
 
 .letras-amarelas{
