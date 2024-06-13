@@ -6,7 +6,7 @@ import {scrollWidgetProtein} from './src/components/widgetprotein.js';
 import {buttonPlaceNewOrder} from './src/components/buttonOrder.js';
 
 document.querySelector('#app').innerHTML = `
-  <body>    
+  <div>    
     <section>
       <div id="container_principal">
           <div class="logo"></div>
@@ -62,7 +62,7 @@ document.querySelector('#app').innerHTML = `
         </section>
       </div>
     </section>
-  </body>
+  </div>
 `
 
 listBroths(document.querySelector('#container_select_broth'));

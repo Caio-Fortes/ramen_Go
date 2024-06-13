@@ -15,11 +15,14 @@ export async function buttonPlaceNewOrder(element){
             brothId: BrothState.brothSelected,
             proteinId: ProteinState.proteinSelected
         }
-        console.log(orderSelected)
 
         try{
             order = await PostService.insertPost(linkLocal, orderSelected);
-            console.log(order)
+            console.log(order);
+
+            sessionStorage.setItem('orderData', JSON.stringify(order));
+            window.location.href = '/pages/Sucess.html';
+
         } catch(err){
             console.log(err)
         }
