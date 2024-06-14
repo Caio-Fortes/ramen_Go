@@ -1,7 +1,7 @@
 import PostService from "../lib/PostService";
 import { onBrothChange, onProteinChange } from '../lib/StateDatas';
 
-export async function buttonPlaceNewOrder(element){
+export async function buttonPlaceMyOrder(element){
      //datas
     let orderSelected = {
         brothId: null,

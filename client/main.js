@@ -3,7 +3,7 @@ import  {listBroths}  from './src/components/broths.js';
 import {listProteins} from './src/components/proteins.js';
 import {scrollWidgetBroth} from './src/components/widgetbroth.js';
 import {scrollWidgetProtein} from './src/components/widgetprotein.js';
-import {buttonPlaceNewOrder} from './src/components/buttonOrder.js';
+import {buttonPlaceMyOrder} from './src/components/buttonOrder.js';
 
 document.querySelector('#app').innerHTML = `
   <div>    
@@ -58,7 +58,7 @@ document.querySelector('#app').innerHTML = `
           </div>
         </section>
         <section>
-          <div id="button_new_order_container"></div>
+          <div id="button_order_container"></div>
         </section>
       </div>
     </section>
@@ -69,5 +69,5 @@ listBroths(document.querySelector('#container_select_broth'));
 listProteins(document.querySelector('#container_select_protein'));
 scrollWidgetBroth(document.querySelector('#select-broth-widget-container'));
 scrollWidgetProtein(document.querySelector('#select-protein-widget-container'));
-buttonPlaceNewOrder(document.querySelector('#button_new_order_container'))
+buttonPlaceMyOrder(document.querySelector('#button_order_container'))
 
