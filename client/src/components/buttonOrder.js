@@ -43,7 +43,7 @@ export async function buttonPlaceMyOrder(element){
             console.log(order);
 
             sessionStorage.setItem('orderData', JSON.stringify(order));
-            window.location.href = '/Sucess.html';
+            window.location.href = '/pages/Sucess.html';
 
         } catch(err){
             console.log(err)
