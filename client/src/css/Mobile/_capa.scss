@@ -23,7 +23,7 @@
 
 #container_capa_sucess{
     @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
-    @include setPositionRelative(100px, auto, auto, auto);
+    @include setPositionRelative(auto, auto, auto, auto);
 }
 
 .circulo-marrom{

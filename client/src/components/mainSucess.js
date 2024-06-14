@@ -7,7 +7,9 @@ document.querySelector('#app').innerHTML = `
   <div>    
     <section>
       <div id="container_principal_sucess">
-        <div class="logo"></div>
+      <div id="resp_title_message_order">
+        ramenGo!
+      </div>
         <div id="container_capa_sucess"></div>
       </div>
     </section>
