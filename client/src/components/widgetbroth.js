@@ -1,40 +1,30 @@
 export async function scrollWidgetBroth(element) {
     //datas
-    let proteins = [];
+    const scrollContainer = document.getElementById('container_select_broth');
+    let widgetsContainer = null;
 
     //methods
-    function scrollBroths(indiceSelected, scrollTo, idContainerScroll, widgetsClass) {
-        const elemento = document.getElementById(idContainerScroll);
-        elemento.scrollTo(scrollTo, 0);
-    
-        let allElements = document.getElementsByClassName(widgetsClass);
-        for (let i = 0; i < allElements.length; i++) {
-            let elementStyle = allElements[i].style;
-            if (i === indiceSelected) {
-                elementStyle.backgroundColor = '#FF4E42'
-                elementStyle.height = '12px';
-                elementStyle.width = '36px';
-                elementStyle.borderRadius = '8px';
-            }
-            else {
-                elementStyle.backgroundColor = '#E0DBBF'
-                elementStyle.height = '12px';
-                elementStyle.width = '12px';
-                elementStyle.borderRadius = '50%';
-            }
-        }
-    }
-   
-    function setClickWidget(){
-        const elements = document.querySelectorAll('.widget-circle-select-broths');
-        elements.forEach(element => {
-            element.addEventListener('click', (event) => {
-                const index = event.target.getAttribute('data-index');
-                const scrollTo = event.target.getAttribute('data-scroll');
-                scrollBroths(parseInt(index), parseInt(scrollTo), 'container_select_broth', 'widget-circle-select-broths');
-            });
+    function setClassWidgetSelected(indiceSelected){
+        widgetsContainer.forEach(widget => {
+            widget.classList.remove('widget-selected');
         });
-        return elements;
+        const widgetSelected = `.widget-circle-select-broths[data-index="${indiceSelected}"]`;
+        const widgetSelectedElement = document.querySelector(widgetSelected);
+        widgetSelectedElement.classList.add('widget-selected');
+    }
+
+    function onScroll() {
+        const scrollLeft = scrollContainer.scrollLeft;
+        console.log(scrollLeft)
+        if(scrollLeft >= 0 && scrollLeft < 176){
+            setClassWidgetSelected(1)
+        }
+        else if(scrollLeft >= 176 && scrollLeft < 564) {
+            setClassWidgetSelected(2)
+        }
+        else{
+            setClassWidgetSelected(3)
+        }
     }
 
     //template
@@ -42,25 +32,43 @@ export async function scrollWidgetBroth(element) {
         document.querySelector('#select-broth-widget-container').innerHTML = `
         <ul class="widget-scroll-cards">
           <li 
-            class="widget-circle-select-broths" 
-            data-index="0" 
+            class="widget-circle-select-broths widget-selected" 
+            data-index="1" 
             data-scroll="0"
           ></li>
           <li 
             class="widget-circle-select-broths" 
-            data-index="1" 
+            data-index="2" 
             data-scroll="300"
           ></li>
           <li 
             class="widget-circle-select-broths" 
-            data-index="2" 
+            data-index="3" 
             data-scroll="600"
           ></li>
         </ul>`
     }
 
+    function setClickWidget (){
+        widgetsContainer = document.querySelectorAll('.widget-circle-select-broths');
+        widgetsContainer.forEach(element => {
+            element.addEventListener('click', (event) => {
+                const scrollTo = event.target.getAttribute('data-scroll');
+                scrollContainer.scrollTo(scrollTo, 0);
+            });
+        });
+    }
+
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+    
     //mounted
     setTemplateWidget();
     setClickWidget();
-    scrollBroths(0, 0, 'container_select_broth', 'widget-circle-select-broths');
+    scrollContainer.addEventListener('scroll', debounce(onScroll, 100));
 }

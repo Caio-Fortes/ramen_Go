@@ -24,20 +24,30 @@ class ObservableState {
 }
 
 const BrothState = new ObservableState({ brothSelected: null });
-const ProteinState = new ObservableState({ proteinSelected: null });
 
 export function setBrothSelected(broth) {
     BrothState.setState({ brothSelected: broth });
-}
-
-export function setProteinSelected(protein) {
-    ProteinState.setState({ proteinSelected: protein });
 }
 
 export function onBrothChange(listener) {
     BrothState.subscribe(listener);
 }
 
+const ProteinState = new ObservableState({ proteinSelected: null });
+
+export function setProteinSelected(protein) {
+    ProteinState.setState({ proteinSelected: protein });
+}
+
 export function onProteinChange(listener) {
     ProteinState.subscribe(listener);
 }
+
+export function setWidgetBroth(scroll) {
+    ProteinState.setState({ scrollWidgetBrothSelected: scroll });
+}
+
+
+
+
+

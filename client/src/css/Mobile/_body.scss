@@ -120,9 +120,14 @@
 .widget-circle-select-broths, .widget-circle-select-proteins{
     background: #E0DBBF; 
     border-radius: 50%; 
-    height: 12px;
-    width: 12px;
     margin-right: 10px;
+    @include setWidthHeight(12px, 12px);
+}
+
+.widget-selected {
+    background-color: #FF4E42;
+    border-radius: 8px;
+    @include setWidthHeight(36px, 12px);
 }
 
 // Body Sucess

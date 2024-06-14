@@ -340,9 +340,15 @@ li {
   .widget-circle-select-broths, .widget-circle-select-proteins {
     background: #E0DBBF;
     border-radius: 50%;
-    height: 12px;
-    width: 12px;
     margin-right: 10px;
+    width: 12px;
+    height: 12px;
+  }
+  .widget-selected {
+    background-color: #FF4E42;
+    border-radius: 8px;
+    width: 36px;
+    height: 12px;
   }
   #title_icon_client {
     color: #FFC024;
