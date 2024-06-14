@@ -1,7 +1,7 @@
-import './styles.css';
-import {order} from './order';
-import {setSVG} from '/public/svg/bowing.js';
-import {buttonPlaceNewOrder} from './buttonNewOrder';
+//import './styles.css';
+// import {order} from './order';
+// // import {setSVG} from '/public/svg/bowing.js';
+// import {buttonPlaceNewOrder} from './buttonNewOrder';
 
 document.querySelector('#app').innerHTML = `
   <div>    
@@ -30,7 +30,7 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
-order(document.querySelector('#container_capa_sucess'));
-setSVG(document.querySelector('#svg_bowing_men'));
-buttonPlaceNewOrder(document.querySelector('#button_order_container'))
+// order(document.querySelector('#container_capa_sucess'));
+// // setSVG(document.querySelector('#svg_bowing_men'));
+// buttonPlaceNewOrder(document.querySelector('#button_order_container'))
 
