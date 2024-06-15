@@ -112,7 +112,7 @@ li {
     top: -20px;
     right: auto;
     bottom: auto;
-    left: 59px;
+    left: 111px;
     background-image: url("/public/images/BalaoAzul.png");
     background-size: cover;
     background-position: center;
@@ -130,39 +130,45 @@ li {
     background-position: center;
   }
   .letras-amarelas {
-    width: 219px;
+    width: auto;
     height: 54px;
     text-align: center;
-    font-size: 48px;
+    font-size: 74px;
     font-weight: 900;
     line-height: 56px;
-    margin-top: 120px;
+    position: absolute;
+    top: 443px;
+    right: auto;
+    bottom: auto;
+    left: auto;
     color: #FFC024;
   }
   .title-go {
-    width: 231px;
+    width: auto;
     height: 100px;
     position: absolute;
-    top: 406px;
-    right: 0px;
-    bottom: 0px;
-    left: 64px;
+    top: 552px;
+    right: auto;
+    bottom: auto;
+    left: auto;
     text-align: center;
-    font-size: 121px;
+    font-size: 185px;
     font-weight: 900;
     line-height: 100px;
     color: #FAFAED;
   }
   .description {
-    position: relative;
-    top: 530px;
+    position: absolute;
+    top: 700px;
     right: auto;
     bottom: auto;
     left: auto;
     text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    width: 657px;
+    letter-spacing: 4px;
   }
   .description::before {
     content: "Enjoy a good ramen in the comfort of \ayour house. Create your own ramen and \a choose your favorite flavour \a combination!";
@@ -477,10 +483,10 @@ li {
     width: 48px;
     height: 224px;
     position: absolute;
-    top: 156px;
-    right: 0px;
-    bottom: 0px;
-    left: 264px;
+    top: 130px;
+    right: 730px;
+    bottom: auto;
+    left: auto;
     text-align: center;
     font-size: 48px;
     font-weight: 900;
@@ -491,38 +497,40 @@ li {
     width: 308px;
     height: 100px;
     position: absolute;
-    top: 280px;
-    right: 0px;
-    bottom: 0px;
-    left: 320px;
+    top: 229px;
+    right: auto;
+    bottom: auto;
+    left: -137px;
     text-align: center;
     font-size: 160px;
     font-weight: 900;
     line-height: 100px;
     color: #FAFAED;
   }
-  .description::after {
+  .description {
+    position: absolute;
+    top: 367px;
+    right: 483px;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    width: 293px;
+    line-height: 33px;
+  }
+  .description::before {
     content: "Enjoy a good ramen in the comfort of your house. \a Create your own ramen \a and choose your favorite \a flavour combination!";
     white-space: pre-line;
-    width: 201px;
-    height: 124px;
-    position: absolute;
-    top: 404px;
-    right: 0px;
-    bottom: 0px;
-    left: 273px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
     color: #FAFAED;
   }
   .button-blue {
     width: 213px;
     height: 60px;
     position: absolute;
-    top: 552px;
+    top: auto;
     right: 0px;
     bottom: 0px;
     left: 273px;

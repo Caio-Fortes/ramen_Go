@@ -43,7 +43,7 @@
 
 .balaoAzul{
     @include setWidthHeight(56px, 54px);
-    @include setPositionAbsolute(-20px, auto, auto, 59px);
+    @include setPositionAbsolute(-20px, auto, auto, 111px);
     background-image: url($BalaoAzul);
     background-size: cover; 
     background-position: center;
@@ -58,22 +58,24 @@
 }
 
 .letras-amarelas{
-    @include setWidthHeight(219px, 54px);
-    @include setFontSizeFontWeightLineHeight(48px, 900, 56px);
-    margin-top: 120px;
+    @include setWidthHeight(auto, 54px);
+    @include setFontSizeFontWeightLineHeight(74px, 900, 56px);
+    @include setPositionAbsolute(443px, auto, auto, auto);
     color: $YellowDefault;
 }
 
 .title-go{
-    @include setWidthHeight(231px, 100px);
-    @include setPositionAbsolute(406px, 0px, 0px, 64px);
-    @include setFontSizeFontWeightLineHeight(121px, 900, 100px);
+    @include setWidthHeight(auto, 100px);
+    @include setPositionAbsolute(552px, auto, auto, auto);
+    @include setFontSizeFontWeightLineHeight(185px, 900, 100px);
     color: $WhiteDefault;
 }
 
 .description{
-    @include setPositionRelative(530px, auto, auto, auto);
-    @include setFontSizeFontWeightLineHeight(16px, 500, 20px);
+    @include setPositionAbsolute(700px, auto, auto, auto);
+    @include setFontSizeFontWeightLineHeight(24px, 400, 33px);
+    width: 657px;
+    letter-spacing: 4px;
     &::before{
         content: 'Enjoy a good ramen in the comfort of \A your house. Create your own ramen and \A choose your favorite flavour \A combination!';
         white-space: pre-line;
