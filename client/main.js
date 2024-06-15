@@ -14,9 +14,11 @@ document.querySelector('#app').innerHTML = `
             <div class="circulo-marrom">
               <div class="entregadora"></div>
             </div>
-          
+            <div class="balaoAzul"></div>
+            <div class="balaoAmarelo"></div>
           </div>
-         
+          <div class="letras-amarelas"> ラーメン </div>
+
       </div>
     </section>
     <section>

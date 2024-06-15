@@ -35,12 +35,18 @@
 
 .balaoAzul{
     @include setWidthHeight(116px, 129px);
-    @include setPositionAbsolute(4px, 217px, auto, auto);
+    @include setPositionAbsolute(-20px, auto, auto, -29px);
+    background-image: url($BalaoAzul);
+    background-size: cover; 
+    background-position: center;
 }
 
 .balaoAmarelo{
     @include setWidthHeight(106px, 242px);
-    //@include setPositionAbsolute(295px, 0px, 0px, 992px);
+    @include setPositionAbsolute(224px, -54px, auto, auto);
+    background-image: url($BalaoAmarelo);
+    background-size: cover; 
+    background-position: center;
 }
 
 .letras-amarelas{

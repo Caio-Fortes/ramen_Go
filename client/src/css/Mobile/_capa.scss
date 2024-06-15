@@ -1,10 +1,10 @@
 
 #container_principal{
-    @include setContainerCapa($MaxWidthMobile, $HeigthCapaMobile, $ImageBackground);
+    @include setContainerCapa($MaxWidthMobile, 964px, $ImageBackground);
 }
 
 #container_principal_sucess{
-    @include setContainerCapa($MaxWidthMobile, $HeigthCapaMobile, '/public/images/backgroundAzul.png');
+    @include setContainerCapa($MaxWidthMobile, 677px, '/public/images/backgroundAzul.png');
 }
 
 .logo{
@@ -42,25 +42,25 @@
 }
 
 .balaoAzul{
-    @include setWidthHeight(45.69px, 50.81px);
-    @include setPositionAbsolute(4px, 217px, auto, auto);
-    background-image: url('/public/images/BalaoAzul.png');
+    @include setWidthHeight(56px, 54px);
+    @include setPositionAbsolute(-20px, auto, auto, 59px);
+    background-image: url($BalaoAzul);
     background-size: cover; 
     background-position: center;
 }
 
 .balaoAmarelo{
-    @include setWidthHeight(41.75px, 95.31px);
-    @include setPositionRelative(11px, 17px, auto, auto);
-    background-image: url('/public/images/BalaoAmarelo.png');
+    @include setWidthHeight(53.75px, 125.31px);
+    @include setPositionAbsolute(135px, 56px, auto, auto);
+    background-image: url($BalaoAmarelo);
     background-size: cover; 
     background-position: center;
 }
 
 .letras-amarelas{
     @include setWidthHeight(219px, 54px);
-    @include setPositionAbsolute(341px, 0px, 0px, 70px);
     @include setFontSizeFontWeightLineHeight(48px, 900, 56px);
+    margin-top: 120px;
     color: $YellowDefault;
 }
 
