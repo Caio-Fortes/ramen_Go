@@ -21,7 +21,7 @@ li {
   list-style-type: none;
 }
 
-@media (max-width: 359px) {
+@media (max-width: 728px) {
   #container_principal {
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ li {
     background-image: url("/public/images/background.png");
     background-size: cover;
     background-position: center;
-    width: 360px;
+    width: 728px;
     height: 677px;
   }
   #container_principal_sucess {
@@ -41,17 +41,17 @@ li {
     background-image: url("/public/images/backgroundAzul.png");
     background-size: cover;
     background-position: center;
-    width: 360px;
+    width: 728px;
     height: 677px;
   }
   .logo {
     width: 125px;
     height: 16px;
-    position: absolute;
+    position: relative;
     top: 20px;
     right: auto;
     bottom: auto;
-    left: 117px;
+    left: auto;
     background-image: url("/public/images/logo.png");
     background-size: cover;
     background-position: center;
@@ -59,16 +59,16 @@ li {
   #container_capa {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: auto;
     justify-content: center;
     flex-wrap: nowrap;
-    position: absolute;
+    position: relative;
     top: 60px;
-    right: 0px;
-    bottom: 0px;
-    left: 48px;
-    width: 265.06px;
-    height: 269px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 575px;
+    height: 381px;
   }
   #container_capa_sucess {
     display: flex;
@@ -83,18 +83,23 @@ li {
     left: auto;
   }
   .circulo-marrom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 70%;
+    height: 100%;
     background: #730000;
     border-radius: 50%;
-    width: 231.19px;
-    height: 231.19px;
   }
   .entregadora {
-    width: 262.3px;
-    height: 269px;
+    width: 380.3px;
+    height: 446px;
     position: relative;
-    top: auto;
-    right: 8px;
-    bottom: 18px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
     left: auto;
     background-image: url("/public/images/entregadora.png");
     background-size: cover;
@@ -379,17 +384,24 @@ li {
     height: 48px;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 728px) {
   #container_principal {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("../client/public/background.png");
+    background-image: url("/public/images/background.png");
     background-size: cover;
     background-position: center;
-    min-width: 360px;
-    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-image: url("/public/images/background.png");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: auto;
     height: 768px;
   }
   .logo {
@@ -400,6 +412,9 @@ li {
     right: 0px;
     bottom: 0px;
     left: 40px;
+    background-image: url("/public/images/logo.png");
+    background-size: cover;
+    background-position: center;
   }
   #container_capa {
     display: flex;
@@ -407,32 +422,36 @@ li {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    min-height: 269px;
-    max-height: 683px;
-    position: absolute;
-    top: 40px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    position: relative;
+    top: 60px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 576px;
+    height: 633px;
   }
   .circulo-marrom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
     background: #730000;
     border-radius: 50%;
-    min-width: 231.19px;
-    max-width: 587px;
-    min-height: 231.19px;
-    max-height: 587px;
+    width: 587px;
+    height: 587px;
   }
   .entregadora {
-    min-width: 262.3px;
-    max-width: 666px;
-    min-height: 269px;
-    max-height: 683px;
+    width: 411px;
+    height: 669px;
     position: relative;
-    top: auto;
-    right: 8px;
-    bottom: 18px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
     left: auto;
+    background-image: url("/public/images/entregadora.png");
+    background-size: cover;
+    background-position: center;
   }
   .balaoAzul {
     width: 116px;

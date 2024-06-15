@@ -1,24 +1,24 @@
 
 #container_principal{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '/public/images/background.png');
+    @include setContainerCapa($MaxWidthMobile, $HeigthCapaMobile, $ImageBackground);
 }
 
 #container_principal_sucess{
-    @include setContainerCapa($WidthMobile, $HeigthCapaMobile, '/public/images/backgroundAzul.png');
+    @include setContainerCapa($MaxWidthMobile, $HeigthCapaMobile, '/public/images/backgroundAzul.png');
 }
 
 .logo{
     @include setWidthHeight(125px, 16px);
-    @include setPositionAbsolute(20px, auto, auto, 117px);
-    background-image: url('/public/images/logo.png');
+    @include setPositionRelative(20px, auto, auto, auto);
+    background-image: url($ImageLogo);
     background-size: cover; 
     background-position: center;
 }
 
 #container_capa{
-    @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
-    @include setPositionAbsolute(60px, 0px, 0px, 48px);
-    @include setWidthHeight($WidthContainerCapaMobile, $HeigthContainerCapaMobile);
+    @include setflexDirectionAlignJustifyWrap(row, auto, center, nowrap);
+    @include setPositionRelative(60px, auto, auto, auto);
+    @include setWidthHeight(575px, 381px);
 }
 
 #container_capa_sucess{
@@ -27,15 +27,16 @@
 }
 
 .circulo-marrom{
+    @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
+    @include setWidthHeight(70%, 100%);
     background: #730000; 
-    border-radius: 50%;  
-    @include setWidthHeight($WidthCirculoMarrom, $HeigthCirculoMarrom);
+    border-radius: 50%;
 }
 
 .entregadora{
-    @include setWidthHeight($WidthEntregadora, $HeightEntregadora);
-    @include setPositionRelative(auto, 8px, 18px, auto);
-    background-image: url('/public/images/entregadora.png');
+    @include setWidthHeight(380.3px, 446px);
+    @include setPositionRelative(13px, auto, auto, auto);
+    background-image: url($ImageEntregadora);
     background-size: cover; 
     background-position: center;
 }

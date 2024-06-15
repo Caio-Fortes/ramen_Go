@@ -1,37 +1,36 @@
 #container_principal{
-    @include setContainerCapaDesktop('../client/public/background.png');
-    @include setMinMaxWidth($WidthMobile, auto);
+    @include setContainerCapaDesktop($ImageBackground);
+    @include setContainerCapa(auto, auto, $ImageBackground);
     height: 768px;
 }
 
 .logo{
     @include setWidthHeight(124.69px, 15.67px);
     @include setPositionAbsolute(40.33px, 0px, 0px, 40px);
+    background-image: url($ImageLogo);
+    background-size: cover; 
+    background-position: center;
 }
 
 #container_capa{
     @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
-    @include setMinMaxHeight($HeigthContainerCapaMobile, 683px);
-    @include setPositionAbsolute(40px, 0px, 0px, 0px);
+    @include setPositionRelative(60px, auto, auto, auto);
+    @include setWidthHeight(576px, 633px);
 }
 
 .circulo-marrom{
+    @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
     background: #730000; 
-    border-radius: 50%;  
-    @include setMinMaxWidth($WidthCirculoMarrom, 587px);
-    @include setMinMaxHeight($HeigthCirculoMarrom, 587px);
+    border-radius: 50%;
+    @include setWidthHeight(587px, 587px);
 }
 
-// .entregadora{
-//     @include setMinMaxWidth($WidthEntregadora, 666px);
-//     @include setMinMaxHeight($HeightEntregadora, 683px);
-//     @include setPositionRelative(auto, 30px, 31px, auto);
-// }
-
 .entregadora{
-    @include setMinMaxWidth($WidthEntregadora, 666px);
-    @include setMinMaxHeight($HeightEntregadora, 683px);
-    @include setPositionRelative(auto, 8px, 18px, auto);
+    @include setWidthHeight(411px, 669px);
+    @include setPositionRelative(13px, auto, auto, auto);
+    background-image: url($ImageEntregadora);
+    background-size: cover; 
+    background-position: center;
 }
 
 .balaoAzul{
