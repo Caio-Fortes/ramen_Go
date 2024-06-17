@@ -43,7 +43,30 @@ document.querySelector('#app').innerHTML = `
         <section>
           <div id="container_select_broth"></div>
         </section>
-
+        <section>
+          <div class="container-widget">
+            <div id="select-broth-widget-container"></div>
+          </div>
+        </section>
+        <section>
+          <div id="title_select_broth">
+            It’s time to choose (or not) your meat!
+          </div>
+          <div id="subtitle_select_broth">
+            Some people love, some don’t. We have options for all tastes. 
+          </div>
+        </section>
+        <section>
+          <div id="container_select_protein"></div>
+        </section>
+        <section>
+          <div class="container-widget">
+            <div id="select-protein-widget-container"></div>
+          </div>
+        </section>
+        <section>
+          <div id="button_new_order_container"></div>
+        </section>
       </div>
     </section>
   </div>

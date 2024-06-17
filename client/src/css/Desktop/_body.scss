@@ -24,6 +24,7 @@
 
 .card{
     height: 400px;
+    width: 272px;
     background-color: $WhiteDefault;
     filter: drop-shadow(0 -1mm 4mm 	rgba(233, 232, 227, 0.846));
     border-radius: 12px;
@@ -67,4 +68,36 @@
 
 .selected-price-card{
     color: $YellowDefault;
+}
+
+
+#button_new_order_container{
+    margin: 40px;
+}
+
+#button_order{
+    @include setWidthHeight(213px, 60px);
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center
+}
+
+.button-active{
+    background-color: $BlueDefault;
+}
+
+.button-disabled{
+    background-color: #C5C5C5;
+}
+
+.text-button-place-order{
+    @include setFontSizeFontWeightLineHeight(14px, 800, 20.79px);
+    font-family: 'FonteDefault';
+    color: #FFFFFF;
+    letter-spacing: 1.7799999713897705px;
+    margin-right: 14px;
 }

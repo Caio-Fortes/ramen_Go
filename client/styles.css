@@ -595,6 +595,7 @@ li {
   }
   .card {
     height: 400px;
+    width: 272px;
     background-color: #FAFAED;
     filter: drop-shadow(0 -1mm 4mm rgba(233, 232, 227, 0.846));
     border-radius: 12px;
@@ -652,5 +653,35 @@ li {
   }
   .selected-price-card {
     color: #FFC024;
+  }
+  #button_new_order_container {
+    margin: 40px;
+  }
+  #button_order {
+    width: 213px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-active {
+    background-color: #1820EF;
+  }
+  .button-disabled {
+    background-color: #C5C5C5;
+  }
+  .text-button-place-order {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20.79px;
+    font-family: "FonteDefault";
+    color: #FFFFFF;
+    letter-spacing: 1.7799999714px;
+    margin-right: 14px;
   }
 }/*# sourceMappingURL=styles.css.map */
