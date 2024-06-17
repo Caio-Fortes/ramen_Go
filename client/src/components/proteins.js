@@ -4,13 +4,13 @@ import { setProteinSelected, onProteinChange } from '../lib/StateDatas';
 export async function listProteins(element) {
     //datas
     let proteins = [];
-    let linkApi = '/proteins'
-    let linkLocal = 'http://localhost:3000/proteins'
+    let linkApi = '/api/proteins'
+    let linkLocal = 'http://localhost:3000/api/proteins'
 
     //methods
     async function get(){
         try{
-            proteins = await PostService.getPosts(linkApi);
+            proteins = await PostService.getPosts(linkLocal);
         } catch(err){
             console.log(err)
         }

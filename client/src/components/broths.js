@@ -4,13 +4,13 @@ import { setBrothSelected, onBrothChange } from '../lib/StateDatas';
 export async function listBroths(element) {
     //datas
     let broths = [];
-    let linkApi = '/broths'
+    let linkApi = '/api/broths'
     let linkLocal = 'http://localhost:3000/api/broths'
 
     //methods
     async function get(){
         try{
-            broths = await PostService.getPosts(linkApi);
+            broths = await PostService.getPosts(linkLocal);
         } catch(err){
             console.log(err)
         }
