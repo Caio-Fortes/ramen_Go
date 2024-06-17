@@ -1,57 +1,70 @@
-#containerTitleBody{
+#container_body{
+    @include setflexDirectionAlignJustifyWrap(column, center, normal, wrap);
+    @include setPositionRelative(50px, auto, auto, auto);
+}
+
+#title_select_broth{
+    @include setFontSizeFontWeightLineHeight(24px, 900, 31px);
+    color: $BlackDefault;
+}
+
+#subtitle_select_broth{
+    @include setFontSizeFontWeightLineHeight(15px, 400, 24px);
+    color: $BlackDefault;
+    margin-top: 20px;
+}
+
+#container_select_protein, #container_select_broth{
+    display: flex;
+    margin-top: 40px;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+}
+
+.card{
+    height: 400px;
+    background-color: $WhiteDefault;
+    filter: drop-shadow(0 -1mm 4mm 	rgba(233, 232, 227, 0.846));
+    border-radius: 12px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: nowrap;
-    background-color: red;
-    @include setWidthHeight(1087px, 448px);
-    @include setPositionAbsolute(883px, 0px, 0px, 139px);
+    align-items: center;
+    justify-content: center;
 }
 
-.title-body{
-    @include setWidthHeight(814px, 50px);
-    @include setPositionAbsolute(883px, 0px, 0px, 268px);
-    @include setFontSizeFontWeightLineHeight(32px, 900, 47.52px);
-    color: $BlackDefault;
-    &::after{
-        content: 'First things first: select your favorite broth.';
-        white-space: pre-line;
-    }
+.selected-card {
+    background-color: $BlueDefault;
 }
 
-.subtitle-body{
-    @include setWidthHeight(571px, 31px);
-    @include setPositionAbsolute(937px, 0px, 0px, 390px);
-    @include setFontSizeFontWeightLineHeight(16px, 400, 24px);
-    color: $BlackDefault;
-    &::after{
-        content: 'It will give the whole flavor on your ramen soup. ';
-        white-space: pre-line;
-    }
+.title-card{
+    @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
+    @include setPositionRelative(10px, auto, auto, auto);
+    color: $BlueDefault;
 }
 
-#container_broths{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
-    justify-items: center;
+.selected-title-card{
+    color: $White;
 }
 
-.red{
-    background-color: red;
-    @include setWidthHeight(320px, 316px);
-    @include setPositionAbsolute(1015px, 0px, 0px, 139px);
+.description-card{
+    color: $BlackDefault;;
+    @include setFontSizeFontWeightLineHeight(10px, 400, 16px);
+    @include setPositionRelative(15px, auto, auto, auto);
 }
 
-.yellow{
-    background-color: yellow;
-    @include setWidthHeight(320px, 316px);
-    @include setPositionAbsolute(1015px, 0px, 0px, 523px);
+.selected-description-card{
+    color: $White;
 }
 
-.blue{
-    background-color: blue;
-    @include setWidthHeight(320px, 316px);
-    @include setPositionAbsolute(1015px, 0px, 0px, 906px);
+.price-card{
+    color: $OrangeDefault;
+    @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
+    @include setPositionRelative(35px, auto, auto, auto);
 }
 
+.selected-price-card{
+    color: $YellowDefault;
+}

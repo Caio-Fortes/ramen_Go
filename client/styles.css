@@ -559,90 +559,98 @@ li {
     letter-spacing: 1.7799999714px;
     margin-right: 14px;
   }
-  #containerTitleBody {
+  #container_body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
-    background-color: red;
-    width: 1087px;
-    height: 448px;
-    position: absolute;
-    top: 883px;
-    right: 0px;
-    bottom: 0px;
-    left: 139px;
+    justify-content: normal;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    left: auto;
   }
-  .title-body {
-    width: 814px;
-    height: 50px;
-    position: absolute;
-    top: 883px;
-    right: 0px;
-    bottom: 0px;
-    left: 268px;
+  #title_select_broth {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 900;
-    line-height: 47.52px;
+    line-height: 31px;
     color: #000000;
   }
-  .title-body::after {
-    content: "First things first: select your favorite broth.";
-    white-space: pre-line;
-  }
-  .subtitle-body {
-    width: 571px;
-    height: 31px;
-    position: absolute;
-    top: 937px;
-    right: 0px;
-    bottom: 0px;
-    left: 390px;
+  #subtitle_select_broth {
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     color: #000000;
+    margin-top: 20px;
   }
-  .subtitle-body::after {
-    content: "It will give the whole flavor on your ramen soup. ";
-    white-space: pre-line;
+  #container_select_protein, #container_select_broth {
+    display: flex;
+    margin-top: 40px;
   }
-  #container_broths {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
-    justify-items: center;
+  #container_select_protein::-webkit-scrollbar, #container_select_broth::-webkit-scrollbar {
+    width: 0px;
   }
-  .red {
-    background-color: red;
-    width: 320px;
-    height: 316px;
-    position: absolute;
-    top: 1015px;
-    right: 0px;
-    bottom: 0px;
-    left: 139px;
+  .card {
+    height: 400px;
+    background-color: #FAFAED;
+    filter: drop-shadow(0 -1mm 4mm rgba(233, 232, 227, 0.846));
+    border-radius: 12px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
   }
-  .yellow {
-    background-color: yellow;
-    width: 320px;
-    height: 316px;
-    position: absolute;
-    top: 1015px;
-    right: 0px;
-    bottom: 0px;
-    left: 523px;
+  .selected-card {
+    background-color: #1820EF;
   }
-  .blue {
-    background-color: blue;
-    width: 320px;
-    height: 316px;
-    position: absolute;
-    top: 1015px;
-    right: 0px;
-    bottom: 0px;
-    left: 906px;
+  .title-card {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    position: relative;
+    top: 10px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    color: #1820EF;
+  }
+  .selected-title-card {
+    color: #FFFFFF;
+  }
+  .description-card {
+    color: #000000;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    position: relative;
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  .selected-description-card {
+    color: #FFFFFF;
+  }
+  .price-card {
+    color: #FF4E42;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    position: relative;
+    top: 35px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+  .selected-price-card {
+    color: #FFC024;
   }
 }/*# sourceMappingURL=styles.css.map */
