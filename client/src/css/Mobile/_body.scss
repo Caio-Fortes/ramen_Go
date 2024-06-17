@@ -1,7 +1,7 @@
 #container_body{
     @include setflexDirectionAlignJustifyWrap(column, center, normal, wrap);
     @include setPositionRelative(50px, auto, auto, auto);
-    @include setWidthHeight(360px, auto);
+    @include setWidthHeight(980px, auto);
 }
 
 #button_order_container{
@@ -53,7 +53,7 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 360px;
+    width: 780px;
     margin-top: 40px;
     &::-webkit-scrollbar{
         width: 0px;
@@ -61,12 +61,12 @@
 }
 
 .card{
-    min-width: 288px;
-    height: 316px;
+    min-width: 725px;
+    height: 400px;
     background-color: $WhiteDefault;
     filter: drop-shadow(0 -1mm 4mm 	rgba(233, 232, 227, 0.846));
     border-radius: 12px;
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
