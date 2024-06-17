@@ -22,13 +22,13 @@ app.use(cors());
 
 //Routers
 const broths = require('./routes/broths');
-app.use('/api/broths', broths);
+app.use('/broths', broths);
 
 const proteins = require('./routes/proteins');
-app.use('/api/proteins', proteins);
+app.use('/proteins', proteins);
 
 const orders = require('./routes/orders');
-app.use('/api/orders', orders);
+app.use('/orders', orders);
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
