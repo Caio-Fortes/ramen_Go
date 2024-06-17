@@ -103,3 +103,8 @@
     @include setPositionRelative(15px, auto, auto, auto);
     color: $YellowDefault;
 }
+
+#button_order_now{
+    display: none;
+}
+

@@ -207,6 +207,9 @@ li {
     left: auto;
     color: #FFC024;
   }
+  #button_order_now {
+    display: none;
+  }
   #container_body {
     display: flex;
     flex-direction: column;
@@ -526,32 +529,32 @@ li {
     white-space: pre-line;
     color: #FAFAED;
   }
-  .button-blue {
+  #button_order_now {
     width: 213px;
     height: 60px;
     position: absolute;
     top: auto;
-    right: 0px;
-    bottom: 0px;
-    left: 273px;
-    background-color: #1820EF;
+    right: auto;
+    bottom: 22px;
+    left: -188px;
     border-radius: 50px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1820EF;
   }
-  .button-blue::before {
-    content: "order now";
-    width: 157px;
-    height: 21px;
+  .text-button-place-order-now {
     text-align: center;
     font-size: 14px;
     font-weight: 800;
     line-height: 20.79px;
-    position: absolute;
-    top: 19px;
-    right: 0px;
-    bottom: 0px;
-    left: 16px;
-    text-align: left;
+    font-family: "FonteDefault";
     color: #FFFFFF;
+    letter-spacing: 1.7799999714px;
+    margin-right: 14px;
   }
   #containerTitleBody {
     display: flex;

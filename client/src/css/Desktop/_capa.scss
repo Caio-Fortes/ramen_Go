@@ -76,19 +76,23 @@
     }
 }
 
-
-.button-blue{
+#button_order_now{
     @include setWidthHeight(213px, 60px);
-    @include setPositionAbsolute(auto, 0px, 0px, 273px);
-    background-color: $BlueDefault;
+    @include setPositionAbsolute(auto, auto, 22px, -188px);
     border-radius: 50px;
-    &::before{
-        content: 'order now';
-        @include setWidthHeight(157px, 21px);
-        @include setFontSizeFontWeightLineHeight(14px, 800, 20.79px);
-        @include setPositionAbsolute(19px, 0px, 0px, 16px);
-        text-align: left;
-        color: #FFFFFF;
-    }
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $BlueDefault;
 }
 
+.text-button-place-order-now{
+    @include setFontSizeFontWeightLineHeight(14px, 800, 20.79px);
+    font-family: 'FonteDefault';
+    color: #FFFFFF;
+    letter-spacing: 1.7799999713897705px;
+    margin-right: 14px;
+}
