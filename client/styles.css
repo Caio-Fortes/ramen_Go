@@ -227,6 +227,9 @@ li {
   #button_order_container {
     margin: 40px;
   }
+  #button_new_order_container {
+    margin: 40px;
+  }
   #button_order {
     width: 213px;
     height: 60px;

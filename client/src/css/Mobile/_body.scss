@@ -8,6 +8,10 @@
     margin: 40px;
 }
 
+#button_new_order_container{
+    margin: 40px;
+}
+
 #button_order{
     @include setWidthHeight(213px, 60px);
     border-radius: 50px;
