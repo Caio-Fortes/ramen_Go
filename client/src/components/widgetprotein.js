@@ -19,7 +19,7 @@ export async function scrollWidgetProtein(element) {
         if(scrollLeft >= 0 && scrollLeft < 176){
             setClassWidgetSelected(1)
         }
-        else if(scrollLeft >= 176 && scrollLeft < 564) {
+        else if(scrollLeft >= 738 && scrollLeft < 1515) {
             setClassWidgetSelected(2)
         }
         else{
@@ -39,12 +39,12 @@ export async function scrollWidgetProtein(element) {
           <li 
             class="widget-circle-select-proteins" 
             data-index="2" 
-            data-scroll="300"
+            data-scroll="738"
           ></li>
           <li 
             class="widget-circle-select-proteins" 
             data-index="3" 
-            data-scroll="600"
+            data-scroll="1515"
           ></li>
         </ul>`
     }
