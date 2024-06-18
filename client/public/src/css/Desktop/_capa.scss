@@ -158,13 +158,25 @@
     text-align: left;
 }
 
-#container_capa_sucess{
+
+#container_capa_sucess {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     gap: 10px;
+}
+
+#container_capa_sucess div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container_capa_sucess img {
+    width: 300px; 
+    height: 339px;
+    object-fit: cover; 
 }
 
 .image-broth-selected_sucess{
