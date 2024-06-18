@@ -1,5 +1,4 @@
 #container_body{
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: normal;
@@ -10,7 +9,6 @@
     right: auto;
     bottom: auto;
     left: auto;
-    /* width: 344px; */
     height: auto;
 }
 
@@ -73,7 +71,6 @@
     scroll-behavior: smooth;
     max-width: 1094px;
     margin-top: 39px;
-    //min-width: 576px;
 }
 
 .card{

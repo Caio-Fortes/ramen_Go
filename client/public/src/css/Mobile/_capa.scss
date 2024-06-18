@@ -48,7 +48,7 @@
 .entregadora{
     width: 262.3px;
     height: 269px;
-    background-image: url(/public/images/entregadora.png);
+    background-image: url('/public/images/entregadora.png');
     background-size: cover;
     background-position: center;
 }
@@ -57,7 +57,7 @@
     width: 45.69px;
     height: 50.81px;
     left: 44px;
-    background-image: url(/public/images/BalaoAzul.png);
+    background-image: url('/images/BalaoAzul.png');
     background-size: cover;
     background-position: center;
 }
@@ -70,7 +70,7 @@
     right: 16px;
     bottom: auto;
     left: auto;
-    background-image: url(/public/images/BalaoAmarelo.png);
+    background-image: url('/images/BalaoAmarelo.png');
     background-size: cover;
     background-position: center;
 }
@@ -133,7 +133,7 @@
 #box{
     flex: 1;
     display: flex;
-    background-image: url(/images/backgroundAzul.png);
+    background-image: url('/images/backgroundAzul.png');
     background-size: cover;
     background-position: center;
     align-content: center;
