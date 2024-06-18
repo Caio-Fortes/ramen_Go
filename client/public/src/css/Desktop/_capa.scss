@@ -136,6 +136,7 @@
     text-align: left;
 }
 
+
 #logo_sucess{
     color: $OrangeDefault;
     @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
@@ -158,12 +159,10 @@
 }
 
 .name-broth-selected-sucess{
-    width: 270px;
-    height: 64px;
     text-align: center;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 900;
-    line-height: 32px;
+    line-height: 47.52px;
     padding: 25px 0px 47px 0px;
     top: 15px;
     right: auto;

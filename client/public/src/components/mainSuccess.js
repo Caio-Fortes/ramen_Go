@@ -3,32 +3,36 @@ import {setSVG} from '/svg/bowing.js';
 import {buttonPlaceNewOrder} from '/src/components/buttonNewOrder.js';
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <section>
-      <div id="background_blue">
-        <div id="logo_sucess">
-          ramenGo!
-        </div>
-        <div id="container_principal_sucess">
-          <div id="container_capa_sucess"></div>
-        </div>
-      </div>
-    </section>
-    
-    <div id="container_body_sucess">
-      <div id="svg_bowing_men"></div>
-      <div id="title_icon_client">
-        どもありがとうございます。
-      </div>
-      <div id="resp_title_message_order">
-        Your order is being prepared
-      </div>
-      <div id="resp_description_message_order">
-        Hold on, when you least expect you will be eating your rámen.
-      </div>
+  <div id="container">
+    <div id="box">
       <section>
-        <div id="button_order_container"></div>
+        <div id="background_blue">
+          <div id="logo_sucess">
+            ramenGo!
+          </div>
+          <div id="container_principal_sucess">
+            <div id="container_capa_sucess"></div>
+          </div>
+        </div>
       </section>
+    </div>
+    
+    <div id="box">
+      <div id="container_body_sucess">
+        <div id="svg_bowing_men"></div>
+        <div id="title_icon_client">
+          どもありがとうございます。
+        </div>
+        <div id="resp_title_message_order">
+          Your order is being prepared
+        </div>
+        <div id="resp_description_message_order">
+          Hold on, when you least expect you will be eating your rámen.
+        </div>
+        <section>
+          <div id="button_order_container"></div>
+        </section>
+      </div>
     </div>
   </div>
 `
