@@ -27,7 +27,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("/public/images/background.png");
+    background-image: url("/images/background.png");
     background-size: cover;
     background-position: center;
     width: auto;
@@ -37,7 +37,7 @@ li {
     width: 125px;
     height: 16px;
     margin-top: 15px;
-    background-image: url("/public/images/logo.png");
+    background-image: url("/images/logo.png");
     background-size: cover;
     background-position: center;
   }
@@ -386,7 +386,7 @@ li {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-image: url("/public/images/background.png");
+    background-image: url("/images/background.png");
     background-size: cover;
     background-position: center;
     width: auto;
@@ -400,7 +400,7 @@ li {
     right: 0px;
     bottom: 0px;
     left: 40px;
-    background-image: url("/public/images/logo.png");
+    background-image: url("/images/logo.png");
     background-size: cover;
     background-position: center;
   }
@@ -432,7 +432,7 @@ li {
     right: auto;
     bottom: auto;
     left: auto;
-    background-image: url("/public/images/entregadora.png");
+    background-image: url("/images/entregadora.png");
     background-size: cover;
     background-position: center;
   }
@@ -442,7 +442,7 @@ li {
     position: relative;
     bottom: 234px;
     left: 66px;
-    background-image: url("/public/images/BalaoAzul.png");
+    background-image: url("/images/BalaoAzul.png");
     background-size: cover;
     background-position: center;
   }
@@ -453,7 +453,7 @@ li {
     right: 56px;
     bottom: auto;
     left: auto;
-    background-image: url(/public/images/BalaoAmarelo.png);
+    background-image: url("/images/BalaoAmarelo.png");
     background-size: cover;
     background-position: center;
   }
@@ -527,7 +527,7 @@ li {
     margin-right: 14px;
   }
   #background_blue {
-    background-image: url(/images/backgroundAzul.png);
+    background-image: url("/images/backgroundAzul.png");
     background-size: cover;
     background-position: center;
   }
