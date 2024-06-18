@@ -5,19 +5,13 @@ import {buttonPlaceNewOrder} from '/src/components/buttonNewOrder.js';
 document.querySelector('#app').innerHTML = `
   <div id="container">
     <div id="box">
-      <section>
-        <div id="background_blue">
-          <div id="logo_sucess">
-            ramenGo!
-          </div>
-          <div id="container_principal_sucess">
-            <div id="container_capa_sucess"></div>
-          </div>
-        </div>
-      </section>
+      <div id="container_body_sucess_one">
+        <div id="logo_sucess"> ramenGo! </div>
+        <div id="container_capa_sucess"></div>
+      </div>
     </div>
     
-    <div id="box">
+    <div id="box2">
       <div id="container_body_sucess">
         <div id="svg_bowing_men"></div>
         <div id="title_icon_client">

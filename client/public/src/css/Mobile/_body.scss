@@ -177,3 +177,14 @@
     height: auto;
 }
 
+#resp_title_message_order{
+    color: $OrangeDefault;
+    margin-top: 20px;
+    @include setFontSizeFontWeightLineHeight(32px, 900, 40px);
+}
+
+
+#resp_description_message_order{
+    margin: 20px;
+    @include setFontSizeFontWeightLineHeight(16px, 400, 24px);
+}

@@ -139,12 +139,6 @@
 
 
 //Sucess page
-#background_blue{
-    background-image: url('/images/backgroundAzul.png');
-    background-size: cover;
-    background-position: center;
-}
-
 #container_principal_sucess{
     display: flex;
     flex-direction: column;
@@ -156,18 +150,26 @@
 
 #logo_sucess{
     color: $OrangeDefault;
-    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
+    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     text-align: left;
-    padding: 20px;
 }
 
 #container_capa_sucess{
-    @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
-    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
 }
 
 .image-broth-selected_sucess{
     margin: 15px;
+    
 }
 
 .title-broth-selected_sucess{
@@ -180,10 +182,5 @@
     font-size: 32px;
     font-weight: 900;
     line-height: 47.52px;
-    padding: 25px 0px 47px 0px;
-    top: 15px;
-    right: auto;
-    bottom: auto;
-    left: auto;
     color: #FFC024;
 }

@@ -130,10 +130,14 @@
 }
 
 //Sucess page
-#background_blue{
+#box{
+    flex: 1;
+    display: flex;
     background-image: url(/images/backgroundAzul.png);
     background-size: cover;
     background-position: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #container_principal_sucess{
