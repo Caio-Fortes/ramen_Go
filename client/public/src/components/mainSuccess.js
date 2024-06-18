@@ -3,15 +3,18 @@ import {setSVG} from '/svg/bowing.js';
 import {buttonPlaceNewOrder} from '/src/components/buttonNewOrder.js';
 
 document.querySelector('#app').innerHTML = `
-  <div>    
+  <div>
     <section>
-      <div id="container_principal_sucess">
-      <div id="resp_title_message_order">
-        ramenGo!
-      </div>
-        <div id="container_capa_sucess"></div>
+      <div id="background_blue">
+        <div id="logo_sucess">
+          ramenGo!
+        </div>
+        <div id="container_principal_sucess">
+          <div id="container_capa_sucess"></div>
+        </div>
       </div>
     </section>
+    
     <div id="container_body_sucess">
       <div id="svg_bowing_men"></div>
       <div id="title_icon_client">
