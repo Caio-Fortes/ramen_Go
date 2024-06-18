@@ -16,6 +16,9 @@ document.querySelector('#app').innerHTML = `
             </div>
             <div class="balaoAmarelo"></div>
           </div>
+          <div class="letras-amarelas"> ラーメン </div>
+          <div class="title-go">GO!</div>
+          <div class="description"></div>
           <button id="button_order_now">
             <div class="text-button-place-order-now">ORDER NOW</div>
             <div>
@@ -24,9 +27,6 @@ document.querySelector('#app').innerHTML = `
                 </svg>
             </div>
           </button>
-          <div class="letras-amarelas"> ラーメン </div>
-          <div class="title-go">GO!</div>
-          <div class="description"></div>
       </div>
     </section>
     <section>

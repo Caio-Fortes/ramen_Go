@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center;
     width: auto;
-    height: auto;
+    height: 768px;
 }
 
 .logo{
@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: absolute;
     justify-content: center;
     flex-wrap: nowrap;
     padding: 60px;
@@ -66,17 +67,25 @@
 }
 
 .letras-amarelas{
-    @include setWidthHeight(48px, 224px);
-    @include setPositionAbsolute(130px, 730px, auto, auto);
-    @include setFontSizeFontWeightLineHeight(48px, 900, 56px);
-    color: $YellowDefault;
+    width: 48px;
+        height: 224px;
+        position: relative;
+        top: 95px;
+        right: 461px;
+        bottom: auto;
+        left: auto;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 900;
+        line-height: 56px;
+        color: #FFC024;
 }
 
 .title-go{
     width: 308px;
     position: relative;
-    bottom: 390px;
-    right: 223px;
+    top: -29px;
+    right: 271px;
     text-align: center;
     font-size: 160px;
     font-weight: 900;
@@ -85,31 +94,44 @@
 }
 
 .description{
-    @include setPositionAbsolute(367px, 483px, auto, auto);
-    @include setFontSizeFontWeightLineHeight(17px, 400, 33px);
-    text-align: left;
-    width: 293px;
-    line-height: 33px;
+    // @include setPositionAbsolute(367px, 483px, auto, auto);
+    // @include setFontSizeFontWeightLineHeight(17px, 400, 33px);
+    // text-align: left;
+    // width: 293px;
+    // line-height: 33px;
     &::before{
         content: 'Enjoy a good ramen in the comfort of your house. \A Create your own ramen \A and choose your favorite \A flavour combination!';
         white-space: pre-line;
         color: $WhiteDefault;
     }
+    position: relative;
+    right: 331px;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    width: 293px;
+    line-height: 33px;
 }
 
 #button_order_now{
     width: 213px;
-    height: 60px;
-    border-radius: 50px;
-    position: relative;
-    top: 127px;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #1820EF;
+    width: 213px;
+        height: 60px;
+        border-radius: 50px;
+        position: relative;
+        top: 13px;
+        right: 362px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #1820EF;
 }
 
 .text-button-place-order-now{
