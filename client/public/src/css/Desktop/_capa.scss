@@ -1,7 +1,13 @@
 #container_principal{
-    @include setContainerCapaDesktop($ImageBackground);
-    @include setContainerCapa(auto, auto, $ImageBackground);
-    height: 768px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-image: url($ImageBackground);
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: auto;
 }
 
 .logo{
@@ -13,9 +19,12 @@
 }
 
 #container_capa{
-    @include setflexDirectionAlignJustifyWrap(row, center, center, nowrap);
-    @include setPositionRelative(60px, auto, auto, auto);
-    @include setWidthHeight(576px, 633px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 60px;
 }
 
 .circulo-marrom{
@@ -34,18 +43,25 @@
 }
 
 .balaoAzul{
-    @include setWidthHeight(116px, 129px);
-    @include setPositionAbsolute(-20px, auto, auto, -29px);
-    background-image: url($BalaoAzul);
-    background-size: cover; 
+    width: 116px;
+    height: 129px;
+    position: relative;
+    bottom: 234px;
+    left: 66px;
+    background-image: url(/public/images/BalaoAzul.png);
+    background-size: cover;
     background-position: center;
 }
 
 .balaoAmarelo{
-    @include setWidthHeight(106px, 242px);
-    @include setPositionAbsolute(224px, -54px, auto, auto);
-    background-image: url($BalaoAmarelo);
-    background-size: cover; 
+    width: 106px;
+    height: 242px;
+    position: relative;
+    right: 56px;
+    bottom: auto;
+    left: auto;
+    background-image: url(/public/images/BalaoAmarelo.png);
+    background-size: cover;
     background-position: center;
 }
 
@@ -57,10 +73,15 @@
 }
 
 .title-go{
-    @include setWidthHeight(308px, 100px);
-    @include setPositionAbsolute(229px, auto, auto, -137px);
-    @include setFontSizeFontWeightLineHeight(160px, 900, 100px);
-    color: $WhiteDefault;
+    width: 308px;
+    position: relative;
+    bottom: 390px;
+    right: 223px;
+    text-align: center;
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 100px;
+    color: #FAFAED;
 }
 
 .description{
@@ -77,16 +98,18 @@
 }
 
 #button_order_now{
-    @include setWidthHeight(213px, 60px);
-    @include setPositionAbsolute(auto, auto, 22px, -188px);
+    width: 213px;
+    height: 60px;
     border-radius: 50px;
+    position: relative;
+    top: 127px;
     border: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background-color: $BlueDefault;
+    background-color: #1820EF;
 }
 
 .text-button-place-order-now{

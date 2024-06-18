@@ -1,7 +1,17 @@
 #container_body{
-    @include setflexDirectionAlignJustifyWrap(column, center, normal, wrap);
-    @include setPositionRelative(50px, auto, auto, auto);
-    @include setWidthHeight(980px, auto);
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    /* width: 344px; */
+    height: auto;
 }
 
 #button_order_container{
@@ -9,7 +19,10 @@
 }
 
 #button_new_order_container{
-    margin: 40px;
+    padding: 29px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 #button_order{
@@ -44,12 +57,13 @@
 #title_select_broth{
     @include setFontSizeFontWeightLineHeight(24px, 900, 31px);
     color: $BlackDefault;
+    padding: 20px;
 }
 
 #subtitle_select_broth{
     @include setFontSizeFontWeightLineHeight(15px, 400, 24px);
     color: $BlackDefault;
-    margin-top: 20px;
+    margin: 21px;
 }
 
 
@@ -57,20 +71,18 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 780px;
-    margin-top: 40px;
-    &::-webkit-scrollbar{
-        width: 0px;
-    }
+    max-width: 1094px;
+    margin-top: 39px;
+    //min-width: 576px;
 }
 
 .card{
-    min-width: 725px;
-    height: 400px;
-    background-color: $WhiteDefault;
-    filter: drop-shadow(0 -1mm 4mm 	rgba(233, 232, 227, 0.846));
+    min-width: 285px;
+    height: 367px;
+    background-color: #FAFAED;
+    filter: drop-shadow(0 -1mm 4mm rgba(233, 232, 227, 0.846));
     border-radius: 12px;
-    margin: 20px;
+    margin: 18px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -113,8 +125,9 @@
 }
 
 .container-widget{
-    position: relative;
-    right: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
 }
 
 .widget-scroll-cards{

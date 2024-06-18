@@ -30,8 +30,8 @@ li {
     background-image: url("/public/images/background.png");
     background-size: cover;
     background-position: center;
-    width: 980px;
-    height: 964px;
+    width: auto;
+    height: auto;
   }
   #container_principal_sucess {
     display: flex;
@@ -47,28 +47,22 @@ li {
   .logo {
     width: 125px;
     height: 16px;
-    position: relative;
-    top: 20px;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    margin-top: 15px;
     background-image: url("/public/images/logo.png");
     background-size: cover;
     background-position: center;
   }
   #container_capa {
     display: flex;
+    display: flex;
+    margin-top: 40px;
     flex-direction: row;
-    align-items: auto;
     justify-content: center;
     flex-wrap: nowrap;
-    position: relative;
     top: 60px;
     right: auto;
     bottom: auto;
     left: auto;
-    width: 575px;
-    height: 381px;
   }
   #container_capa_sucess {
     display: flex;
@@ -88,55 +82,47 @@ li {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    width: 70%;
-    height: 100%;
+    width: 231.19px;
+    height: 231.19px;
     background: #730000;
     border-radius: 50%;
   }
   .entregadora {
-    width: 380.3px;
-    height: 446px;
-    position: relative;
-    top: 13px;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    background-image: url("/public/images/entregadora.png");
+    width: 262.3px;
+    height: 269px;
+    background-image: url(/public/images/entregadora.png);
     background-size: cover;
     background-position: center;
   }
   .balaoAzul {
-    width: 56px;
-    height: 54px;
-    position: absolute;
-    top: -20px;
-    right: auto;
-    bottom: auto;
-    left: 111px;
-    background-image: url("/public/images/BalaoAzul.png");
+    width: 45.69px;
+    height: 50.81px;
+    left: 44px;
+    background-image: url(/public/images/BalaoAzul.png);
     background-size: cover;
     background-position: center;
   }
   .balaoAmarelo {
-    width: 53.75px;
-    height: 125.31px;
-    position: absolute;
-    top: 135px;
-    right: 56px;
+    width: 41.75px;
+    height: 95.31px;
+    position: relative;
+    top: 78px;
+    right: 16px;
     bottom: auto;
     left: auto;
-    background-image: url("/public/images/BalaoAmarelo.png");
+    background-image: url(/public/images/BalaoAmarelo.png);
     background-size: cover;
     background-position: center;
   }
   .letras-amarelas {
-    width: auto;
+    width: 219px;
     height: 54px;
     text-align: center;
-    font-size: 74px;
+    font-size: 48px;
     font-weight: 900;
     line-height: 56px;
-    position: absolute;
+    /* position: absolute; */
+    margin-top: 29px;
     top: 443px;
     right: auto;
     bottom: auto;
@@ -144,31 +130,30 @@ li {
     color: #FFC024;
   }
   .title-go {
-    width: auto;
+    width: 231px;
     height: 100px;
-    position: absolute;
+    /* position: absolute; */
+    margin-top: 12px;
     top: 552px;
     right: auto;
     bottom: auto;
     left: auto;
     text-align: center;
-    font-size: 185px;
+    font-size: 120px;
     font-weight: 900;
     line-height: 100px;
     color: #FAFAED;
   }
   .description {
-    position: absolute;
     top: 700px;
     right: auto;
     bottom: auto;
     left: auto;
     text-align: center;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 33px;
-    width: 657px;
-    letter-spacing: 4px;
+    padding: 20px 0px 40px 0px;
   }
   .description::before {
     content: "Enjoy a good ramen in the comfort of \ayour house. Create your own ramen and \a choose your favorite flavour \a combination!";
@@ -211,24 +196,27 @@ li {
     display: none;
   }
   #container_body {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: normal;
     flex-wrap: wrap;
     position: relative;
+    width: 100%;
     top: 50px;
     right: auto;
     bottom: auto;
     left: auto;
-    width: 980px;
+    /* width: 344px; */
     height: auto;
   }
   #button_order_container {
     margin: 40px;
   }
   #button_new_order_container {
-    margin: 40px;
+    padding: 29px;
+    display: flex;
+    justify-content: center;
   }
   #button_order {
     width: 213px;
@@ -263,6 +251,7 @@ li {
     font-weight: 900;
     line-height: 31px;
     color: #000000;
+    padding: 20px;
   }
   #subtitle_select_broth {
     text-align: center;
@@ -270,25 +259,22 @@ li {
     font-weight: 400;
     line-height: 24px;
     color: #000000;
-    margin-top: 20px;
+    margin: 21px;
   }
   #container_select_protein, #container_select_broth {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 780px;
-    margin-top: 40px;
-  }
-  #container_select_protein::-webkit-scrollbar, #container_select_broth::-webkit-scrollbar {
-    width: 0px;
+    max-width: 1094px;
+    margin-top: 39px;
   }
   .card {
-    min-width: 725px;
-    height: 400px;
+    min-width: 285px;
+    height: 367px;
     background-color: #FAFAED;
     filter: drop-shadow(0 -1mm 4mm rgba(233, 232, 227, 0.846));
     border-radius: 12px;
-    margin: 20px;
+    margin: 18px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -344,8 +330,9 @@ li {
     color: #FFC024;
   }
   .container-widget {
-    position: relative;
-    right: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
   }
   .widget-scroll-cards {
     display: flex;
@@ -401,16 +388,8 @@ li {
     background-image: url("/public/images/background.png");
     background-size: cover;
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    background-image: url("/public/images/background.png");
-    background-size: cover;
-    background-position: center;
     width: auto;
     height: auto;
-    height: 768px;
   }
   .logo {
     width: 124.69px;
@@ -430,13 +409,7 @@ li {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    position: relative;
-    top: 60px;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 576px;
-    height: 633px;
+    padding: 60px;
   }
   .circulo-marrom {
     display: flex;
@@ -464,24 +437,21 @@ li {
   .balaoAzul {
     width: 116px;
     height: 129px;
-    position: absolute;
-    top: -20px;
-    right: auto;
-    bottom: auto;
-    left: -29px;
-    background-image: url("/public/images/BalaoAzul.png");
+    position: relative;
+    bottom: 234px;
+    left: 66px;
+    background-image: url(/public/images/BalaoAzul.png);
     background-size: cover;
     background-position: center;
   }
   .balaoAmarelo {
     width: 106px;
     height: 242px;
-    position: absolute;
-    top: 224px;
-    right: -54px;
+    position: relative;
+    right: 56px;
     bottom: auto;
     left: auto;
-    background-image: url("/public/images/BalaoAmarelo.png");
+    background-image: url(/public/images/BalaoAmarelo.png);
     background-size: cover;
     background-position: center;
   }
@@ -501,12 +471,9 @@ li {
   }
   .title-go {
     width: 308px;
-    height: 100px;
-    position: absolute;
-    top: 229px;
-    right: auto;
-    bottom: auto;
-    left: -137px;
+    position: relative;
+    bottom: 390px;
+    right: 223px;
     text-align: center;
     font-size: 160px;
     font-weight: 900;
@@ -535,12 +502,9 @@ li {
   #button_order_now {
     width: 213px;
     height: 60px;
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: 22px;
-    left: -188px;
     border-radius: 50px;
+    position: relative;
+    top: 127px;
     border: none;
     display: flex;
     flex-direction: row;
@@ -565,11 +529,7 @@ li {
     align-items: center;
     justify-content: normal;
     flex-wrap: wrap;
-    position: relative;
-    top: 50px;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    padding-top: 50px;
   }
   #title_select_broth {
     text-align: center;
