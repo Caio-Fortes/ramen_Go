@@ -12,10 +12,6 @@
     height: auto;
 }
 
-#container_principal_sucess{
-    @include setContainerCapa($MaxWidthMobile, 677px, '/images/backgroundAzul.png');
-}
-
 .logo{
     @include setWidthHeight(125px, 16px);
     margin-top: 15px;
@@ -35,11 +31,6 @@
     right: auto;
     bottom: auto;
     left: auto;
-}
-
-#container_capa_sucess{
-    @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
-    @include setPositionRelative(auto, auto, auto, auto);
 }
 
 .circulo-marrom{
@@ -134,10 +125,6 @@
     }
 }
 
-.image-broth-selected_sucess{
-    @include setWidthHeight(338px, 374px);
-}
-
 .title-broth-selected_sucess{
     @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
     color: $White;
@@ -148,14 +135,48 @@
     color: $White;
 }
 
-.name-broth-selected-sucess{
-    @include setWidthHeight(270px, 64px);
-    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
-    @include setPositionRelative(15px, auto, auto, auto);
-    color: $YellowDefault;
-}
 
 #button_order_now{
     display: none;
 }
 
+//Sucess page
+#container_principal_sucess{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-image: url(/images/backgroundAzul.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#resp_title_message_order{
+    color: $OrangeDefault;
+    margin-top: 20px;
+    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
+}
+
+#container_capa_sucess{
+    @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
+    padding-top: 10px;
+}
+
+.image-broth-selected_sucess{
+    margin: 15px;
+}
+
+.name-broth-selected-sucess{
+    width: 270px;
+    height: 64px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    padding: 25px 0px 47px 0px;
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    color: #FFC024;
+}

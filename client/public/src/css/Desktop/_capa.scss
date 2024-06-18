@@ -119,3 +119,50 @@
     letter-spacing: 1.7799999713897705px;
     margin-right: 14px;
 }
+
+
+//Sucess page
+#container_principal_sucess{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-image: url(/images/backgroundAzul.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#resp_title_message_order{
+    color: $OrangeDefault;
+    margin-top: 20px;
+    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
+}
+
+#container_capa_sucess{
+    @include setflexDirectionAlignJustifyWrap(column, center, flex-start, nowrap);
+    padding-top: 10px;
+}
+
+.image-broth-selected_sucess{
+    margin: 15px;
+}
+
+.title-broth-selected_sucess{
+    @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
+    color: $White;
+}
+
+.name-broth-selected-sucess{
+    width: 270px;
+    height: 64px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    padding: 25px 0px 47px 0px;
+    top: 15px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    color: #FFC024;
+}

@@ -149,17 +149,25 @@
 
 // Body Sucess
 
+#container_body_sucess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    height: auto;
+}
+
 #title_icon_client{
     color: $YellowDefault;
     margin-top: 20px;
     @include setFontSizeFontWeightLineHeight(20px, 900, 24px);
-}
-
-#resp_title_message_order{
-    color: $OrangeDefault;
-    margin-top: 20px;
-    @include setFontSizeFontWeightLineHeight(24px, 900, 32px);
-    @include setWidthHeight(325px, 66px);
 }
 
 #resp_description_message_order{

@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
         <div id="container_capa_sucess"></div>
       </div>
     </section>
-    <div id="container_body">
+    <div id="container_body_sucess">
       <div id="svg_bowing_men"></div>
       <div id="title_icon_client">
         どもありがとうございます。
