@@ -1,5 +1,5 @@
-@import './src/css/mixins';
-@import './src/css/variaveis';
+@import './mixins';
+@import './variaveis';
 
 @font-face {
     font-family: 'FonteDefault';
@@ -26,13 +26,13 @@ li{
 }
 
 @media (max-width: $MaxWidthMobile) {
-    @import './src/css/Mobile/capa';
-    @import './src/css/Mobile/body';
+    @import './Mobile/capa';
+    @import './Mobile/body';
 }
 
 @media (min-width: $MaxWidthMobile){
-    @import './src/css/Desktop/capa';
-    @import './src/css/Desktop/body';
+    @import './Desktop/capa';
+    @import './Desktop/body';
 }
 
 
