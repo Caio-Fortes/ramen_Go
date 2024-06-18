@@ -442,7 +442,7 @@ li {
     position: relative;
     bottom: 234px;
     left: 66px;
-    background-image: url(/public/images/BalaoAzul.png);
+    background-image: url("/public/images/BalaoAzul.png");
     background-size: cover;
     background-position: center;
   }
