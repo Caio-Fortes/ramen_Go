@@ -55,11 +55,11 @@ async function generateOrderId(apiKey) {
 function setImageOrderByProteinName(proteinSelected){
     switch(proteinSelected){
         case 'Chasu':
-            return "/public/images/ProteinChasu.png";
+            return "/images/ProteinChasu.png";
         case 'Yasai Vegetarian':
-            return "/public/images/ProteinYasaiVegetarian.png";
+            return "/images/ProteinYasaiVegetarian.png";
         case 'Karaague':
-            return "/public/images/ProteinKaraague.png";
+            return "/images/ProteinKaraague.png";
         default: '';
     }
 }
