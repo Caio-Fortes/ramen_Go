@@ -16,10 +16,10 @@ export async function scrollWidgetBroth(element) {
     function onScroll() {
         const scrollLeft = scrollContainer.scrollLeft;
         console.log(scrollLeft)
-        if(scrollLeft >= 0 && scrollLeft < 176){
+        if(scrollLeft >= 0 && scrollLeft < 182){
             setClassWidgetSelected(1)
         }
-        else if(scrollLeft >= 738 && scrollLeft < 1515) {
+        else if(scrollLeft >= 182 && scrollLeft < 399) {
             setClassWidgetSelected(2)
         }
         else{
@@ -39,12 +39,12 @@ export async function scrollWidgetBroth(element) {
           <li 
             class="widget-circle-select-broths" 
             data-index="2" 
-            data-scroll="738"
+            data-scroll="182"
           ></li>
           <li 
             class="widget-circle-select-broths" 
             data-index="3" 
-            data-scroll="1515"
+            data-scroll="399"
           ></li>
         </ul>`
     }
