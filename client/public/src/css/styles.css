@@ -71,7 +71,7 @@ li {
   .entregadora {
     width: 262.3px;
     height: 269px;
-    background-image: url("/public/images/entregadora.png");
+    background-image: url("/images/entregadora.png");
     background-size: cover;
     background-position: center;
   }
